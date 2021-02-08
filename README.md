@@ -1,7 +1,5 @@
 # KGB Adventures
 
-# Project Overview
-
 
 ## Project Description
 
