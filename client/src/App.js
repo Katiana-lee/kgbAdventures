@@ -4,10 +4,11 @@ import Landing from './screens/Landing/Landing'
 import AdventureDetail from './screens/AdventureDetail/Detail'
 import AdventureEdit from './screens/AdventureEdit/Edit'
 import Adventures from './screens/Adventures/Adventures'
-import AdventureCreate from './screens/AdeventureCreate/Create'
+import AdventureCreate from './screens/AdventureCreate/Create'
 import SignIn from './screens/SignIn/SignIn'
 import SignOut from './screens/SignOut/SignOut'
 import SignUp from './screens/SignUp/SignUp'
+import { Route, Switch, Redirect } from 'react-router-dom'
 import { verifyUser } from './services/users'
 
 
