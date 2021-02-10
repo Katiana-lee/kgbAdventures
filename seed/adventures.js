@@ -18,7 +18,7 @@ const main = async () => {
   ];
 
   await Adventure.insertMany(adventures);
-  console.log("Created an advenutre!");
+  console.log("Created an adventure!");
 };
 const run = async () => {
   await main();
