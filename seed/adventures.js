@@ -16,11 +16,11 @@ const main = async () => {
      
     },
     {
-      title: "",
-      location: "",
-      category: "",
+      title: "Clearwater Beach",
+      location: "Clearwater, Florida",
+      category: "Beach",
       price: "",
-      description: "",
+      description: "The sugar fine white sand is a trademark of this fabulous beach. Perfect for a day in the sun. You might even spot a dolphin or two playing on the horizon.",
       details: "",
       imgURL: "",
      
@@ -38,7 +38,7 @@ const main = async () => {
   ];
 
   await Adventure.insertMany(adventures);
-  console.log("Created an advenutre!");
+  console.log("Created advenutres!");
 };
 const run = async () => {
   await main();
