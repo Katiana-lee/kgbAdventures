@@ -1,5 +1,5 @@
 const db = require("../db/connection");
-const Adventure = require("../models/adventures");
+const Adventure = require("../models/adventure");
 
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
@@ -8,7 +8,7 @@ const main = async () => {
     {
       title: "Mesmerizing Waterfall",
       location: "McArthur-Burney Falls, California",
-      category: "Forest",
+      category: ['Forest'],
       price: "$10 per car entry",
       description: "Burney Falls Loop Trail is a 1 mile heavily trafficked loop trail located near Burney, California that features a beautiful waterfall ",
       details: ['hiking', 'horseback-riding','wildlife','camping','fishing'],
