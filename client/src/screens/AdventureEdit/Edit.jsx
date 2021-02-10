@@ -4,7 +4,7 @@ import { useParams, Redirect } from 'react-router-dom'
 import Layout from '../../components/shared/Layout/Layout'
 import { getAdventure, updateAdventure } from '../../services/adventures'
 
-const AdventureEdit = (props) => {
+const Edit = (props) => {
   const [adventure, setAdventure] = useState({
     title: '',
     location: '',
