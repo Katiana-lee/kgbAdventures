@@ -4,17 +4,16 @@ import Landing from './screens/Landing/Landing'
 import AdventureDetail from './screens/AdventureDetail/Detail'
 import AdventureEdit from './screens/AdventureEdit/Edit'
 import Adventures from './screens/Adventures/Adventures'
-import AdventureCreate from './screens/AdeventureCreate/Create'
+import AdventureCreate from './screens/AdventureCreate/Create'
 import SignIn from './screens/SignIn/SignIn'
 import SignOut from './screens/SignOut/SignOut'
 import SignUp from './screens/SignUp/SignUp'
+import { Route, Switch, Redirect } from 'react-router-dom'
 import { verifyUser } from './services/users'
 
-
-
-
 function App() {
-  const [user, setUser] = useState(null)
+  const [user, setUser] = useState(null);
+  const [filter, setFilter] = useState('all');
   
   useEffect(() => {
     const fetchUser = async () => {
@@ -31,7 +30,7 @@ function App() {
     <div className="app">
     <Switch>
       <Route exact path="/">
-        <Landing user={user} />
+        <Landing user={user} filter={filter} setFilter={setFilter}/>
       </Route>
       <Route path="/sign-up">
         <SignUp setUser={setUser} />
@@ -43,7 +42,7 @@ function App() {
         <SignOut setUser={setUser} clearUser={clearUser} />
       </Route>
       <Route exact path="/adventures">
-        <Adventures user={user} />
+        <Adventures user={user} filter={filter} setFilter={setFilter}/>
       </Route>
       <Route path="/add-adventure">
         {user ? <AdventureCreate user={user} /> : <Redirect to="/sign-up" />}

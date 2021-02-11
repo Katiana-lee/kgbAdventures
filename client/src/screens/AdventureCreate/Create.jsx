@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react'
-import './Edit.css'
-import { useParams, Redirect } from 'react-router-dom'
+import React, { useState } from 'react'
+import './Create.css'
 import Layout from '../../components/shared/Layout/Layout'
-import { getAdventure, updateAdventure } from '../../services/adventures'
+import { Redirect } from 'react-router-dom'
+import { createAdventure } from '../../services/adventures'
 
-const Edit = (props) => {
+const AdventureCreate = (props) => {
   const [adventure, setAdventure] = useState({
     title: '',
     location: '',
@@ -15,17 +15,7 @@ const Edit = (props) => {
     imgURL: ["", "", ""]
   })
 
-  const [isUpdated, setUpdated] = useState(false)
-    let { id } = useParams
-
-    useEffect(() => {
-      const fetchAdventure  = async () => {
-          const adventure = await getAdventure(id)
-          setAdventure(adventure)
-      }
-      fetchAdventure()
-  }, [id])
-
+  const [isCreated, setCreated] = useState(false)
 
   const handleChange = (event) => {
     const { name, value } = event.target
@@ -33,25 +23,25 @@ const Edit = (props) => {
             ...adventure,
             [name]: value
     })
-}
+  }
 
-const handleSubmit = async (event) => {
-  event.preventDefault()
-  let { id } = props.match.params
-  const updated = await updateAdventure(id, adventure)
-  setUpdated(updated)
-}
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+    const created = await createAdventure(adventure)
+    setCreated({ created })
+  }
 
-if (isUpdated) {
-  return <Redirect to={`/adventures/${props.match.params.id}`} />
-}
-
+  if (isCreated) {
+    return <Redirect to={`/adventures`} />
+  }
 
   return (
     <Layout user={props.user}>
-      <div className="adventure-edit">
-        <div className="adventure-title">
-          <form onSubmit={handleSubmit}>
+      <h1 className="create-title">CREATE NEW ADVENTURE</h1>
+      <form className="create-form" onSubmit={handleSubmit}>
+        
+        {/* Title */}
+        <label for="input-title">Title:</label>
         <input
           id="input-title"
           className="input-title"
@@ -62,11 +52,9 @@ if (isUpdated) {
           autoFocus
           onChange={handleChange}
         />
-          </form>
-        </div>
 
-         {/* Location */}
-        <form className="edit-form" onSubmit={handleSubmit}>
+        {/* Location */}
+        <label for="input-location">Location:</label>
         <input
           id="input-location"
           className="input-location"
@@ -78,6 +66,7 @@ if (isUpdated) {
         />
 
         {/* Category */}
+        <label for="input-category">Category:</label>
         <input
           id="input-category"
           className="input-category category-1"
@@ -103,6 +92,7 @@ if (isUpdated) {
         />
 
         {/* Description */}
+        <label for="input-description">Description:</label>
         <textarea
           id="input-description"
           className="textarea-description"
@@ -115,6 +105,7 @@ if (isUpdated) {
         />
 
         {/* Pricing */}
+        <label for="input-price">Price:</label>
         <input
           id="input-price"
           className="input-price"
@@ -126,6 +117,7 @@ if (isUpdated) {
         />
 
         {/* Details */}
+        <label for="input-details">details:</label>
         <input
           id="input-details"
           className="input-details details-1"
@@ -150,9 +142,8 @@ if (isUpdated) {
           onChange={handleChange}
         />
 
-          {/* Images */}
-          <div className="image-container">
-          <img className="edit-adventure-images" src={adventure.imgURL} alt={adventure.imgURL} />
+        {/* Images */}
+        <label for="input-img">imgs:</label>
         <input
           id="input-img"
           className="input-img imgURL-1"
@@ -175,13 +166,11 @@ if (isUpdated) {
           value={adventure.imgURL[2]}
           name='imgURL-3'
           onChange={handleChange}
-            />
-            </div>
+        />
         <button type='submit' className="submit-button">Submit</button>
       </form>
-    </div>
     </Layout>
   )
 }
 
-export default Edit
+export default AdventureCreate;

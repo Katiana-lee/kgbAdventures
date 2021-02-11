@@ -9,10 +9,11 @@ const Nav = () => {
       <div className='nav'>
         <NavLink className="logo" to='/'>KGB Adventures</NavLink>
         <div className="links">
-          <select name = "dropdown">
+          <select name="dropdown">
+            <option value="all">All</option>
             <option value="beaches">Beach</option>
             <option value="countrySide">Country Side</option>
-            <option value="cultureHeritage">Cultural Heritage Centers</option>
+            <option value="cultureHeritage">Culture and Heritage</option>
             <option value="desert">Desert</option>
             <option value="famousJourney">Famous Journeys</option>
             <option value="forest">Forest</option>
