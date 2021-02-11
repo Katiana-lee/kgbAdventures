@@ -35,10 +35,10 @@ const Adventures = (props) => {
   const handleSort = (type) => {
     setSortType(type);
     switch (type) {
-      case "name-ascending":
+      case "title-ascending":
         setQueriedAdventures(AZ(queriedAdventures));
         break;
-      case "name-descending":
+      case "title-descending":
         setQueriedAdventures(ZA(queriedAdventures));
         break;
       case "price-ascending":
