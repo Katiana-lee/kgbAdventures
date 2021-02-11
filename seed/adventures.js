@@ -39,7 +39,7 @@ const main = async () => {
       imgURL: ["https://i.redd.it/wyaabe8wwvi31.jpg"],
     },
     {
-      title: "Famous Journeys, Cultural Heritage",
+      title: "Famous Journeys, Cultural and Heritage",
       location: "Bejing, China",
       category: ["Famous Journeys", "Other", "Forest"],
       price: "FREE",
@@ -48,7 +48,7 @@ const main = async () => {
       imgURL: ["https://i.redd.it/wyaabe8wwvi31.jpg"],
     },
     {
-      title: "Cultural Heritage",
+      title: "Cultural and Heritage",
       location: "Machu Picchu Peru",
       category: ["Cultural Heritage", "Desert", "Mountain"],
       price: "FREE",
