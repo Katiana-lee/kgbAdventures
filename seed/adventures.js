@@ -27,16 +27,16 @@ const main = async () => {
       description:
         "Lovely view of the sunset with a special someone. The view is to die for!! ",
       details: ["hiking", "boatride", "camping"],
-      imgURL: ["", "", ""],
+      imgURL: ["https://i.redd.it/wyaabe8wwvi31.jpg"],
     },
     {
       title: "Forest",
       location: "random",
       category: ["random", "Forest"],
       price: "FREE",
-      description: "",
-      details: [""],
-      imgURL: ["", "", ""],
+      description: "asdfasdlkfjadslfkjaldskf",
+      details: ["sldkfjalsd"],
+      imgURL: ["https://i.redd.it/wyaabe8wwvi31.jpg"],
     },
     {
       title: "Famous Journeys, Cultural Heritage",
@@ -45,7 +45,7 @@ const main = async () => {
       price: "FREE",
       description: "Historical place in Chinan that is 13,171 miles ",
       details: ["hiking", "tourist attraction"],
-      imgURL: ["", "", ""],
+      imgURL: ["https://i.redd.it/wyaabe8wwvi31.jpg"],
     },
     {
       title: "Cultural Heritage",
@@ -55,7 +55,7 @@ const main = async () => {
       description:
         "Built in lush, mountainous terrain high above the Urubamba River, Machu Picchu lies in one of the most stunning settings of any archeological site in the world. ",
       details: ["hiking", "mountains"],
-      imgURL: ["", "", ""],
+      imgURL: ["https://i.redd.it/wyaabe8wwvi31.jpg"],
     },
     {
       title: "Beach",
@@ -65,7 +65,7 @@ const main = async () => {
       description:
         "A veritable paradise of sugar white sand, crystal clear waters, and dramatic scenery, Thailand’s tropical beaches are renowned around the globe for their beauty",
       details: ["beach", "tanning", "jet skiis", "sight-seeing"],
-      imgURL: ["", "", ""],
+      imgURL: ["https://i.redd.it/wyaabe8wwvi31.jpg"],
     },
     {
       title: "Desert",
@@ -75,7 +75,7 @@ const main = async () => {
       description:
         "ne of the most iconic sites in the world, the Pyramids of Giza, just outside Cairo, are a surreal sight rising from the barren desert landscape. Standing guard nearby, and almost as impressive, is the Sphinx, gazing blankly out over the land.",
       details: ["desert", "hot", "hiking"],
-      imgURL: ["", "", ""],
+      imgURL: ["https://i.redd.it/wyaabe8wwvi31.jpg"],
     },
   ];
 
