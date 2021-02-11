@@ -17,7 +17,7 @@ const Adventures = (props) => {
     const fetchAdventures = async () => {
       const adventures = await getAdventures();
       setAllAdventures(adventures);
-      if (filter !== "all") {
+      if (filter !== "All") {
         let temp = [];
         adventures.map((adventure) => {
           if (adventure.category.includes(filter)) {
