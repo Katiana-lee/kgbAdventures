@@ -48,3 +48,4 @@ const AdventureDetail = (props) => {
 }
 
 export default AdventureDetail;
+
