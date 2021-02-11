@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './Detail.css'
 import Layout from '../../components/shared/Layout/Layout'
-import { getAdventure, deleteAdventure } from '../../services/Adventures'
+import { getAdventure, deleteAdventure } from '../../services/adventures'
 import { useParams, Link } from 'react-router-dom'
 
 const AdventureDetail = (props) => {
