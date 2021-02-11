@@ -173,4 +173,4 @@ const AdventureCreate = (props) => {
   )
 }
 
-export default AdventureCreate
+export default AdventureCreate;

@@ -47,4 +47,4 @@ const AdventureDetail = (props) => {
   )
 }
 
-export default AdventureDetail
+export default AdventureDetail;
