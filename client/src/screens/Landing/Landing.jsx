@@ -21,16 +21,32 @@ function Landing(props) {
           <h1>Featured Cards Section</h1>
           <div className="category-cards">
             <Link to="/adventures">
-              <div onClick={handleOnClick("all")} className="category-card">All</div>
+              <div onClick={handleOnClick("All")} className="category-card">All</div>
             </Link>
-            <div className="category-card">Beach</div>
-            <div className="category-card">Country Side</div>
-            <div className="category-card">Culture and Heritage</div>
-            <div className="category-card">Desert</div>
-            <div className="category-card">Famous Journeys</div>
-            <div className="category-card">Forest</div>
-            <div className="category-card">Mountain</div>
-            <div className="category-card">Other</div>
+            <Link to="/adventures">
+              <div onClick={handleOnClick("Beach")} className="category-card">Beach</div>
+            </Link>
+            <Link to="/adventures">
+              <div onClick={handleOnClick("Country Side")} className="category-card">Country Side</div>
+            </Link>
+            <Link to="/adventures">
+              <div onClick={handleOnClick("Culture and Heritage")} className="category-card">Culture and Heritage</div>
+            </Link>
+            <Link to="/adventures">
+              <div onClick={handleOnClick("Desert")} className="category-card">Desert</div>
+            </Link>
+            <Link to="/adventures">
+              <div onClick={handleOnClick("Famous Journeys")} className="category-card">Famous Journeys</div>
+            </Link>
+            <Link to="/adventures">
+              <div onClick={handleOnClick("Forest")} className="category-card">Forest</div>
+            </Link>
+            <Link to="/adventures">
+              <div onClick={handleOnClick("Mountain")} className="category-card">Mountain</div>
+            </Link>
+            <Link to="/adventures">
+              <div onClick={handleOnClick("Other")} className="category-card">Other</div>
+            </Link>
           </div>
         </div>
       </div>
