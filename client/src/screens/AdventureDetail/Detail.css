@@ -1,0 +1,31 @@
+.main-content {
+  display: block;
+  padding-bottom: 50px;
+}
+
+.wrapper {
+  *zoom: 1;
+  max-width: 1660px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+*, input, :before, :after {
+    box-sizing: border-box;
+}
+
+body, input, textarea, button, select {
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: 'Bitter', sans-serif;
+  color: #5b5757;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+
+.wrapper:after {
+    content: '';
+    display: table;
+    clear: both;
+}
