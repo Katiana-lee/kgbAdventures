@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Bitter', sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Bitter:wght@100;300;400;500;600;700;800;900&display=swap");
+}
+
 footer {
   background: black;
   display: flex;
@@ -10,4 +15,23 @@ footer {
   left: 0;
   bottom: 0;
   width: 100vw;
+}
+
+.foot-title-links {
+  color: white;
+  font-family: 'Bitter', sans-serif;
+  font-weight: 100;
+  font-size: 15px;
+}
+
+* {
+  text-decoration: none;
+}
+
+a {
+  color: inherit;
+}
+
+.intouch-links {
+  border: red 2px solid;
 }
