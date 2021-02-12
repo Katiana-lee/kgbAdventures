@@ -8,7 +8,7 @@ import Layout from "../../components/shared/Layout/Layout";
 import { getAdventures } from "../../services/adventures";
 
 const Adventures = (props) => {
-  const { filter, setFilter } = props;
+  const { onChange, filter, setFilter } = props;
   const [allAdventures, setAllAdventures] = useState([]);
   const [queriedAdventures, setQueriedAdventures] = useState([]);
   const [sortType, setSortType] = useState([]);
@@ -30,7 +30,7 @@ const Adventures = (props) => {
       }
     };
     fetchAdventures();
-  }, []);
+  }, [filter]);
 
   const handleSort = (type) => {
     setSortType(type);
@@ -76,7 +76,7 @@ const Adventures = (props) => {
   ));
 
   return (
-    <Layout user={props.user}>
+    <Layout onChange={onChange} user={props.user}>
       <Search onSubmit={handleSubmit} onChange={handleSearch} />
       <Sort onSubmit={handleSubmit} onChange={handleSort} />
       <div className="adventures">{adventuresJSX}</div>

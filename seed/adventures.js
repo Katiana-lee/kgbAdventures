@@ -50,7 +50,7 @@ const main = async () => {
     {
       title: "Cultural and Heritage",
       location: "Machu Picchu Peru",
-      category: ["Cultural Heritage", "Desert", "Mountain"],
+      category: ["Culture and Heritage", "Desert", "Mountain"],
       price: "FREE",
       description:
         "Built in lush, mountainous terrain high above the Urubamba River, Machu Picchu lies in one of the most stunning settings of any archeological site in the world. ",

@@ -1,0 +1,13 @@
+footer {
+  background: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.outer-footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+}

@@ -3,7 +3,7 @@ import Layout from '../../components/shared/Layout/Layout';
 import { Link } from 'react-router-dom';
 
 function Landing(props) {
-  const { filter, setFilter } = props;
+  const { onChange, filter, setFilter } = props;
 
   function handleOnClick(category) {
     console.log(category);
@@ -11,7 +11,7 @@ function Landing(props) {
   }
 
   return (
-    <Layout user={props.user}>
+    <Layout onChange={ onChange } user={props.user}>
       <div>
         <h1>Landing page image goes here</h1>
         <div>
