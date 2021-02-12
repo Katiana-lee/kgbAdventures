@@ -39,7 +39,7 @@ const AdventureDetail = (props) => {
     //   </div>
     // </Layout>
 
-    <Layout>
+    <Layout onChange={props.onChange}>
       <div className="wrapper main-content">
 
       </div>

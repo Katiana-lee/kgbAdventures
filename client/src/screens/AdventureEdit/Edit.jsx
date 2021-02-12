@@ -48,7 +48,7 @@ if (isUpdated) {
 
 
   return (
-    <Layout user={props.user}>
+    <Layout onChange={props.onChange} user={props.user}>
       <div className="adventure-edit">
         <div className="adventure-title">
           <form onSubmit={handleSubmit}>

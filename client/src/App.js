@@ -5,6 +5,7 @@ import AdventureDetail from './screens/AdventureDetail/Detail'
 import AdventureEdit from './screens/AdventureEdit/Edit'
 import Adventures from './screens/Adventures/Adventures'
 import AdventureCreate from './screens/AdventureCreate/Create'
+import AboutUs from './screens/AboutUs/AboutUs'
 import SignIn from './screens/SignIn/SignIn'
 import SignOut from './screens/SignOut/SignOut'
 import SignUp from './screens/SignUp/SignUp'
@@ -52,13 +53,16 @@ function App() {
         <Adventures onChange={onChange} user={user} filter={filter} setFilter={setFilter}/>
       </Route>
       <Route path="/add-adventure">
-        {user ? <AdventureCreate user={user} /> : <Redirect to="/sign-up" />}
+        {user ? <AdventureCreate onChange={onChange} user={user} /> : <Redirect to="/sign-up" />}
       </Route>
       <Route exact path="/adventures/:id/edit">
-        {user ? <AdventureEdit user={user} /> : <Redirect to='/' />}
+        {user ? <AdventureEdit onChange={onChange} user={user} /> : <Redirect to='/' />}
       </Route>
       <Route exact path="/adventures/:id">
-        <AdventureDetail user={user} />
+        <AdventureDetail onChange={onChange} user={user} />
+      </Route>
+      <Route path="/about-us">
+        <AboutUs onChange={onChange}/> 
       </Route>
     </Switch>
   </div>

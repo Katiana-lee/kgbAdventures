@@ -36,7 +36,7 @@ const AdventureCreate = (props) => {
   }
 
   return (
-    <Layout user={props.user}>
+    <Layout onChange={props.onChange} user={props.user}>
       <h1 className="create-title">CREATE NEW ADVENTURE</h1>
       <form className="create-form" onSubmit={handleSubmit}>
         
