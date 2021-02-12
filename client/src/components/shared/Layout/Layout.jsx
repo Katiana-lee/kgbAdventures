@@ -7,11 +7,11 @@ const Layout = (props) => {
   console.log(props)
   return (
     <div className='layout'>
-      <Nav onChange={props.onChange} />
+      <Nav onChange={props.onChange} user={props.user}/>
       <div className='layout-children'>
         {props.children}
       </div>
-      <Footer />
+      <Footer user={props.user}/>
     </div>
   );
 }
