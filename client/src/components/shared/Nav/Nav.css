@@ -1,0 +1,18 @@
+.nav {
+  border-bottom: 2px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+}
+
+.link {
+  padding-right: 20px;
+  padding-left: 20px;
+}
