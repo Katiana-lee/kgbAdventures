@@ -7,14 +7,16 @@ function Footer(props) {
 
   const authenticatedOptions = (
     <>
-        <NavLink className="link" to="/add-adventure">Add Adventure</NavLink>
-        <NavLink className="link" to="/sign-out">Sign Out</NavLink>
+      <NavLink className="" to="/add-adventure">Add Adventure</NavLink>
+      <br></br>  
+      <NavLink className="" to="/sign-out">Sign Out</NavLink>
     </>
   )
   const unauthenticatedOptions = (
       <>
-          <NavLink className="link" to="/sign-up">Sign Up</NavLink>
-          <NavLink className="link" to="/sign-in">Sign In</NavLink>
+        <NavLink className="" to="/sign-up">Sign Up</NavLink>
+        <br></br>
+        <NavLink className="" to="/sign-in">Sign In</NavLink>
       </>
   )
 
@@ -22,27 +24,26 @@ function Footer(props) {
     <div className="outer-footer">
       <footer>
         <div className="foot-link get-in-touch">
-          <div className="foot-title">Get In Touch</div>
+          <div className="foot-title">GET IN TOUCH</div>
           <div className="foot-title-links intouch-links">
             <p>+8 800 200 23 16<br></br>vlad@kgb.org</p>
             <p>KGB Headquarters<br></br>Kremlin Office #123<br></br>Moscow, Russia</p>
           </div>
         </div>
         <div className="foot-link resources">
-          <div className="foot-title">Resources</div>
-          <div className="foot-title-links">
+          <div className="foot-title">RESOURCES</div>
+          <div className="foot-title-links resources-links">
             <p>
-              {user && <div className="link welcome">Welcome, {user.username}</div>}
               {user ? authenticatedOptions : unauthenticatedOptions}
             </p>
           </div>
         </div>
         <div className="foot-link newsletter">
-          <div className="foot-title">Newsletter</div>
+          <div className="foot-title">NEWSLETTER</div>
           <div className="foot-title-links"></div>
         </div>
         <div className="foot-link get-connected">
-          <div className="foot-title">Get Connected</div>
+          <div className="foot-title">GET CONNECTED</div>
           <div className="foot-title-links"></div>
         </div>
       </footer>
