@@ -48,7 +48,7 @@ const main = async () => {
       imgURL: ["https://i.redd.it/wyaabe8wwvi31.jpg"],
     },
     {
-      title: "Culture and Heritage, Desert, Mountain",
+      title: "Culture and Heritage, Desert.., Mountain",
       location: "Machu Picchu Peru",
       category: ["Culture and Heritage", "Desert", "Mountain"],
       price: "FREE",

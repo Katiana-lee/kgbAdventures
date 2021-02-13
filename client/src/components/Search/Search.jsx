@@ -8,8 +8,8 @@ const Search = (props) => {
                 className="search-input"
                 value={props.value}
                 onChange={(e) => props.onChange(e)}
-                name="Search"
-                placeholder="Search"
+                name="search"
+                placeholder="search"
                 type="text"
                 autoFocus
             />
