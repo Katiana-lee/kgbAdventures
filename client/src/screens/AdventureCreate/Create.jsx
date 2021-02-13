@@ -7,14 +7,13 @@ import { createAdventure } from '../../services/adventures'
 
 const AdventureCreate = (props) => {
 
-  
-
+ 
 
 
   const [adventure, setAdventure] = useState({
     title: '',
     location: '',
-    category: ['', '', ''],
+    category: [],
     price: '',
     description: '',
     details: ["", "", ""],
@@ -31,13 +30,15 @@ const AdventureCreate = (props) => {
     })
   }
 
-  function handleChangeArray(event) {
-    const value = event.target.value;
+  const arrayChange = (event) => {
+    const { name, value } = event.target
     setAdventure({
       ...adventure,
-      [event.target.name]: value
-    });
+      // [name]:value
+    })
+    adventure.category.push(event.target.value)
   }
+  
 
   const handleSubmit = async (event) => {
     event.preventDefault()
@@ -86,11 +87,10 @@ const AdventureCreate = (props) => {
           id='input-category-1'
           className='input-category-1'
           value={adventure.category}
-          name='category1'
+          name= 'input-category-1'
           required
-        onChange={handleChangeArray}>
+        onChange={arrayChange}>
             <option value="" disable selection hidden>Select Category</option>
-            <option value="All">All</option>
             <option value="Beach">Beach</option>
             <option value="Country Side">Country Side</option>
             <option value="Culture and Heritage">Culture and Heritage</option>
@@ -106,11 +106,11 @@ const AdventureCreate = (props) => {
           id='input-category-2'
           className='input-category-2'
           value={adventure.category}
-          name='category2'
+          name='input-category-2'
           required
-        onChange={handleChangeArray}>
+        onChange={arrayChange}>
             <option value="" disable selection hidden>Select Category</option>
-            <option value="All">All</option>
+            
             <option value="Beach">Beach</option>
             <option value="Country Side">Country Side</option>
             <option value="Culture and Heritage">Culture and Heritage</option>
@@ -126,11 +126,10 @@ const AdventureCreate = (props) => {
           id='input-category-3'
           className='input-category-3'
           value={adventure.category}
-          name='category3'
+          name='input-category-3'
           required
-        onChange={handleChangeArray}>
+        onChange={arrayChange}>
             <option value="" disable selection hidden>Select Category</option>
-            <option value="All">All</option>
             <option value="Beach">Beach</option>
             <option value="Country Side">Country Side</option>
             <option value="Culture and Heritage">Culture and Heritage</option>
