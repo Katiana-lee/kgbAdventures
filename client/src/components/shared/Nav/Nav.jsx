@@ -28,12 +28,16 @@ const Nav = (props) => {
             <option value="Other">Other</option>
           </select>
           <NavLink className="about-us link" to="/about-us">About Us</NavLink>
-          <form className="search-link link">
-            <i class="fa fa-search"></i>
-            <input type="search" id="search" name="search" placeholder="Adventure Title"></input>
-          </form>
+          <NavLink to="/adventures">
+            <section className="search">
+              <label for="search-input">
+                <i className="fa fa-search"></i>
+                <span className="sr-only">Search Adventures</span>
+              </label>
+              <input id="search-input" placeholder="Search Adventures"/>
+            </section>
+          </NavLink>
         </div>
-
       </div>
     </nav>
   )
