@@ -2,13 +2,18 @@ import React, { useState } from 'react'
 import './Create.css'
 import Layout from '../../components/shared/Layout/Layout'
 import { Redirect } from 'react-router-dom'
+import { useEffect } from 'react'
 import { createAdventure } from '../../services/adventures'
 
 const AdventureCreate = (props) => {
+
+ 
+
+
   const [adventure, setAdventure] = useState({
     title: '',
     location: '',
-    category: ["", "", ""],
+    category: [],
     price: '',
     description: '',
     details: ["", "", ""],
@@ -24,6 +29,16 @@ const AdventureCreate = (props) => {
             [name]: value
     })
   }
+
+  const arrayChange = (event) => {
+    const { name, value } = event.target
+    setAdventure({
+      ...adventure,
+      // [name]:value
+    })
+    adventure.category.push(event.target.value)
+  }
+  
 
   const handleSubmit = async (event) => {
     event.preventDefault()
@@ -43,6 +58,7 @@ const AdventureCreate = (props) => {
         {/* Title */}
         <label for="input-title">Title:</label>
         <input
+          type='text'
           id="input-title"
           className="input-title"
           placeholder='Enter Title'
@@ -60,15 +76,74 @@ const AdventureCreate = (props) => {
           className="input-location"
           placeholder='Enter Location'
           value={adventure.location}
-          name='author'
+          name='location'
           required
           onChange={handleChange}
         />
 
         {/* Category */}
-        <label for="input-category">Category:</label>
+<label for='input-category-1'>Category:</label>
+        <select
+          id='input-category-1'
+          className='input-category-1'
+          value={adventure.category}
+          name= 'input-category-1'
+          required
+        onChange={arrayChange}>
+            <option value="" disable selection hidden>Select Category</option>
+            <option value="Beach">Beach</option>
+            <option value="Country Side">Country Side</option>
+            <option value="Culture and Heritage">Culture and Heritage</option>
+            <option value="Desert">Desert</option>
+            <option value="Famous Journeys">Famous Journeys</option>
+            <option value="Forest">Forest</option>
+            <option value="Mountain">Mountain</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <label for='input-category-2'>Category:</label>
+        <select
+          id='input-category-2'
+          className='input-category-2'
+          value={adventure.category}
+          name='input-category-2'
+          required
+        onChange={arrayChange}>
+            <option value="" disable selection hidden>Select Category</option>
+            
+            <option value="Beach">Beach</option>
+            <option value="Country Side">Country Side</option>
+            <option value="Culture and Heritage">Culture and Heritage</option>
+            <option value="Desert">Desert</option>
+            <option value="Famous Journeys">Famous Journeys</option>
+            <option value="Forest">Forest</option>
+            <option value="Mountain">Mountain</option>
+            <option value="Other">Other</option>
+        </select>
+        
+        <label for='input-category-3'>Category:</label>
+        <select
+          id='input-category-3'
+          className='input-category-3'
+          value={adventure.category}
+          name='input-category-3'
+          required
+        onChange={arrayChange}>
+            <option value="" disable selection hidden>Select Category</option>
+            <option value="Beach">Beach</option>
+            <option value="Country Side">Country Side</option>
+            <option value="Culture and Heritage">Culture and Heritage</option>
+            <option value="Desert">Desert</option>
+            <option value="Famous Journeys">Famous Journeys</option>
+            <option value="Forest">Forest</option>
+            <option value="Mountain">Mountain</option>
+            <option value="Other">Other</option>
+          </select>
+
+
+        {/* <label for="input-category-1">Category:</label>
         <input
-          id="input-category"
+          id="input-category-1"
           className="input-category category-1"
           placeholder='Enter Category'
           value={adventure.category[0]}
@@ -89,7 +164,7 @@ const AdventureCreate = (props) => {
           value={adventure.category[2]}
           name='category-3'
           onChange={handleChange}
-        />
+        /> */}
 
         {/* Description */}
         <label for="input-description">Description:</label>
@@ -108,9 +183,10 @@ const AdventureCreate = (props) => {
         <label for="input-price">Price:</label>
         <input
           id="input-price"
+          type='number'
           className="input-price"
           placeholder='Enter Price'
-          value={adventure.author}
+          value={adventure.price.toString()}
           name='price'
           required
           onChange={handleChange}
