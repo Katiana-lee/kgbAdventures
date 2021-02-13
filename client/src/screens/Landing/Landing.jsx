@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '../../components/shared/Layout/Layout';
+import LandingCarousel from '../../components/LandingCarousel/LandingCarousel'
 import { Link } from 'react-router-dom';
 
 function Landing(props) {
@@ -13,7 +14,7 @@ function Landing(props) {
   return (
     <Layout onChange={ onChange } user={props.user}>
       <div>
-        <h1>Landing page image goes here</h1>
+        <LandingCarousel />
         <div>
           <h1>Featured Carosel goes here</h1>
         </div>
