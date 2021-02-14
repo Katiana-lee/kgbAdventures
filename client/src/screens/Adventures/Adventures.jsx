@@ -54,7 +54,7 @@ const Adventures = (props) => {
 
   const handleSearch = (event) => {
     const newQueriedAdventures = allAdventures.filter((adventure) =>
-      adventure.name.toLowerCase().includes(event.target.value.toLowerCase())
+      adventure.title.toLowerCase().includes(event.target.value.toLowerCase())
     );
     setQueriedAdventures(newQueriedAdventures, () => handleSort(sortType));
   };
