@@ -72,16 +72,22 @@ const AdventureCreate = (props) => {
   }
   
   
+  
 
   const handleSubmit = async (event) => {
     event.preventDefault()
     let imagesToAdd = [images.image1,images.image2,images.image3]
-    let detailsToAdd = [d.detail1,d.detail2,d.detail3]
+    let detailsToAdd = [d.detail1, d.detail2, d.detail3]
+    adventure.imgURL.push(imagesToAdd)
+    adventure.details.push(detailsToAdd)
     setAdventure({
       ...adventure,
-      details: detailsToAdd,
-      imgURL: imagesToAdd
-})
+      
+       
+    })
+
+   
+    
     const created = await createAdventure(adventure)
     setCreated({ created })
   }
@@ -140,90 +146,7 @@ const AdventureCreate = (props) => {
         <label for="other">Other</label>
 
     
-        
-{/* <label for='input-category-1'>Category:</label>
-        <select
-          id='input-category-1'
-          className='input-category-1'
-          value={adventure.category}
-          name= 'input-category-1'
-          // required
-        onChange={arrayChange}>
-            <option value="" disable selection hidden>Select Category</option>
-            <option value="Beach">Beach</option>
-            <option value="Country Side">Country Side</option>
-            <option value="Culture and Heritage">Culture and Heritage</option>
-            <option value="Desert">Desert</option>
-            <option value="Famous Journeys">Famous Journeys</option>
-            <option value="Forest">Forest</option>
-            <option value="Mountain">Mountain</option>
-            <option value="Other">Other</option>
-        </select>
-
-        <label for='input-category-2'>Category:</label>
-        <select
-          id='input-category-2'
-          className='input-category-2'
-          value={adventure.category}
-          name='input-category-2'
-          // required
-        onChange={arrayChange}>
-            <option value="" disable selection hidden>Select Category</option>
-            
-            <option value="Beach">Beach</option>
-            <option value="Country Side">Country Side</option>
-            <option value="Culture and Heritage">Culture and Heritage</option>
-            <option value="Desert">Desert</option>
-            <option value="Famous Journeys">Famous Journeys</option>
-            <option value="Forest">Forest</option>
-            <option value="Mountain">Mountain</option>
-            <option value="Other">Other</option>
-        </select>
-        
-        <label for='input-category-3'>Category:</label>
-        <select
-          id='input-category-3'
-          className='input-category-3'
-          value={adventure.category}
-          name='input-category-3'
-          // required
-        onChange={arrayChange}>
-            <option value="" disable selection hidden>Select Category</option>
-            <option value="Beach">Beach</option>
-            <option value="Country Side">Country Side</option>
-            <option value="Culture and Heritage">Culture and Heritage</option>
-            <option value="Desert">Desert</option>
-            <option value="Famous Journeys">Famous Journeys</option>
-            <option value="Forest">Forest</option>
-            <option value="Mountain">Mountain</option>
-            <option value="Other">Other</option>
-          </select> */}
-
-
-        {/* <label for="input-category-1">Category:</label>
-        <input
-          id="input-category-1"
-          className="input-category category-1"
-          placeholder='Enter Category'
-          value={adventure.category[0]}
-          name='category-1'
-          required
-          onChange={handleChange}
-        />
-        <input
-          className="input-category category-2"
-          placeholder='Enter Category'
-          value={adventure.category[1]}
-          name='category-2'
-          onChange={handleChange}
-        />
-        <input
-          className="input-category category-3"
-          placeholder='Enter Category'
-          value={adventure.category[2]}
-          name='category-3'
-          onChange={handleChange}
-        /> */}
+      
 
         {/* Description */}
         <label for="input-description">Description:</label>
