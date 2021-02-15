@@ -122,7 +122,26 @@ const AdventureCreate = (props) => {
         />
 
         {/* Category */}
-<label for='input-category-1'>Category:</label>
+        <input type='checkbox' id='option1' name='beach' value="Beach" onChange={arrayChange}></input>
+        <label for="beach">Beach</label>
+        <input type='checkbox' id='option2' name='country side' value="Country Side" onChange={arrayChange}></input>
+        <label for="country side">Country Side</label>
+        <input type='checkbox' id='option3' name='culture and heritage' value="Culture and Heritage" onChange={arrayChange}></input>
+        <label for="culture and heritage">Culture and Heritage</label>
+        <input type='checkbox' id='option4' name='desert' value="Desert" onChange={arrayChange}></input>
+        <label for="desert">Desert</label>
+        <input type='checkbox' id='option5' name='famous journeys' value='Famous Journeys' onChange={arrayChange}></input>
+        <label for="famous journeys">Famous Journeys</label>
+        <input type='checkbox' id='option6' name='forest' value='Forest' onChange={arrayChange}></input>
+        <label for="forest">Forest</label>
+        <input type='checkbox' id='option7' name='mountain' value="Mountain" onChange={arrayChange}></input>
+        <label for="mountain">Mountain</label>
+        <input type='checkbox' id='option8' name='other' value='Other' onChange={arrayChange}></input>
+        <label for="other">Other</label>
+
+    
+        
+{/* <label for='input-category-1'>Category:</label>
         <select
           id='input-category-1'
           className='input-category-1'
@@ -178,7 +197,7 @@ const AdventureCreate = (props) => {
             <option value="Forest">Forest</option>
             <option value="Mountain">Mountain</option>
             <option value="Other">Other</option>
-          </select>
+          </select> */}
 
 
         {/* <label for="input-category-1">Category:</label>
