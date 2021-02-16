@@ -5,44 +5,26 @@ import Layout from '../../components/shared/Layout/Layout'
 import { getAdventure, updateAdventure } from '../../services/adventures'
 
 const Edit = (props) => {
-  const [d, setD] = useState({
-    detail1: '',
-    detail2: '',
-    detail3: '',
-  })
-
-  const [images, setImages] = useState({
-    image1: '',
-    image2: '',
-    image3: '',
-  })
-  
-  
- 
-
-
   const [adventure, setAdventure] = useState({
     title: '',
     location: '',
-    category: [],
+    category: ["", "", ""],
     price: '',
     description: '',
-    details: [],
-    imgURL: []
+    details: ["", "", ""],
+    imgURL: ["", "", ""]
   })
 
-
   const [isUpdated, setUpdated] = useState(false)
-  let { id } = useParams()
-  
+    let { id } = useParams
 
-useEffect(() => {
-        const fetchAdventure = async () => {
-            const product = await getAdventure(id)
-            setAdventure(adventure)
-        }
-        fetchAdventure()
-    }, [id])
+    useEffect(() => {
+      const fetchAdventure  = async () => {
+          const adventure = await getAdventure(id)
+          setAdventure(adventure)
+      }
+      fetchAdventure()
+  }, [id])
 
 
   const handleChange = (event) => {
@@ -51,71 +33,26 @@ useEffect(() => {
             ...adventure,
             [name]: value
     })
-  }
-  
+}
 
-  const arrayChange = (event) => {
-    const { name, value } = event.target
-    setAdventure({
-      ...adventure,
-      // [name]:value
-    })
-    adventure.category.push(event.target.value)
-  }
-
-
-
-  const detailsChange = (event) => {
-    const { name, value } = event.target
-    setD({
-      ...d,
-      [name]:value
-    })
-  }
-
-  const imagesChange = (event) => {
-    const { name, value } = event.target
-    setImages({
-      ...images,
-      [name]:value
-    })
-  }
-  
-
-
-
-  const handleSubmit = async (event) => {
-    event.preventDefault()
-    let imagesToAdd = [images.image1,images.image2,images.image3]
-    let detailsToAdd = [d.detail1, d.detail2, d.detail3]
-    adventure.imgURL.push(imagesToAdd)
-    adventure.details.push(detailsToAdd)
-    setAdventure({
-      ...adventure,
-      
-       
-    })
-
-   
-    
-    const updated = await updateAdventure(id,adventure)
-    setUpdated({ updated })
-  }
+const handleSubmit = async (event) => {
+  event.preventDefault()
+  let { id } = props.match.params
+  const updated = await updateAdventure(id, adventure)
+  setUpdated(updated)
+}
 
 if (isUpdated) {
-  return <Redirect to={`/adventures`} />
+  return <Redirect to={`/adventures/${props.match.params.id}`} />
 }
 
 
   return (
     <Layout onChange={props.onChange} user={props.user}>
-      <h1 className="create-title">Edit ADVENTURE</h1>
-      <form className="create-form" onSubmit={handleSubmit}>
-        
-        {/* Title */}
-        <label for="input-title">Title:</label>
+      <div className="adventure-edit">
+        <div className="adventure-title">
+          <form onSubmit={handleSubmit}>
         <input
-          type='text'
           id="input-title"
           className="input-title"
           placeholder='Enter Title'
@@ -125,42 +62,47 @@ if (isUpdated) {
           autoFocus
           onChange={handleChange}
         />
+          </form>
+        </div>
 
-        {/* Location */}
-        <label for="input-location">Location:</label>
+         {/* Location */}
+        <form className="edit-form" onSubmit={handleSubmit}>
         <input
           id="input-location"
           className="input-location"
           placeholder='Enter Location'
           value={adventure.location}
-          name='location'
+          name='author'
           required
           onChange={handleChange}
         />
 
         {/* Category */}
-        <input type='checkbox' id='option1' name='beach' value="Beach" onChange={arrayChange}></input>
-        <label for="beach">Beach</label>
-        <input type='checkbox' id='option2' name='country side' value="Country Side" onChange={arrayChange}></input>
-        <label for="country side">Country Side</label>
-        <input type='checkbox' id='option3' name='culture and heritage' value="Culture and Heritage" onChange={arrayChange}></input>
-        <label for="culture and heritage">Culture and Heritage</label>
-        <input type='checkbox' id='option4' name='desert' value="Desert" onChange={arrayChange}></input>
-        <label for="desert">Desert</label>
-        <input type='checkbox' id='option5' name='famous journeys' value='Famous Journeys' onChange={arrayChange}></input>
-        <label for="famous journeys">Famous Journeys</label>
-        <input type='checkbox' id='option6' name='forest' value='Forest' onChange={arrayChange}></input>
-        <label for="forest">Forest</label>
-        <input type='checkbox' id='option7' name='mountain' value="Mountain" onChange={arrayChange}></input>
-        <label for="mountain">Mountain</label>
-        <input type='checkbox' id='option8' name='other' value='Other' onChange={arrayChange}></input>
-        <label for="other">Other</label>
-
-    
-      
+        <input
+          id="input-category"
+          className="input-category category-1"
+          placeholder='Enter Category'
+          value={adventure.category[0]}
+          name='category-1'
+          required
+          onChange={handleChange}
+        />
+        <input
+          className="input-category category-2"
+          placeholder='Enter Category'
+          value={adventure.category[1]}
+          name='category-2'
+          onChange={handleChange}
+        />
+        <input
+          className="input-category category-3"
+          placeholder='Enter Category'
+          value={adventure.category[2]}
+          name='category-3'
+          onChange={handleChange}
+        />
 
         {/* Description */}
-        <label for="input-description">Description:</label>
         <textarea
           id="input-description"
           className="textarea-description"
@@ -173,90 +115,71 @@ if (isUpdated) {
         />
 
         {/* Pricing */}
-        <label for="input-price">Price:</label>
         <input
           id="input-price"
-          type='number'
           className="input-price"
           placeholder='Enter Price'
-          value={adventure.price.toString()}
+          value={adventure.author}
           name='price'
           required
           onChange={handleChange}
         />
 
         {/* Details */}
-        <label for="input-details">details:</label>
         <input
-          type='text'
-          id="input-details-1"
+          id="input-details"
           className="input-details details-1"
           placeholder='Enter Details'
-          value={d.detail1}
-          name='detail1'
+          value={adventure.details[0]}
+          name='details-1'
           required
-          onChange={detailsChange}
+          onChange={handleChange}
         />
-
-
         <input
-          id='input-details-2'
           className="input-details details-2"
           placeholder='Enter Details'
-          value={d.detail2}
-          name='detail2'
-          required
-          onChange={detailsChange}
+          value={adventure.details[1]}
+          name='details-2'
+          onChange={handleChange}
         />
         <input
-          id='input-details-3'
           className="input-details details-3"
           placeholder='Enter Details'
-          value={d.detail3}
-          name='detail3'
-          required
-          onChange={detailsChange}
+          value={adventure.details[2]}
+          name='details-3'
+          onChange={handleChange}
         />
 
-        {/* Images */}
-        <label for="input-images">details:</label>
+          {/* Images */}
+          <div className="image-container">
+          <img className="edit-adventure-images" src={adventure.imgURL} alt={adventure.imgURL} />
         <input
-          type='text'
-          id="input-images-1"
-          className="input-images images-1"
-          placeholder='Enter Images'
-          value={images.imgage1}
-          name='image1'
+          id="input-img"
+          className="input-img imgURL-1"
+          placeholder='Enter Image URL'
+          value={adventure.imgURL[0]}
+          name='imgURL-1'
           required
-          onChange={imagesChange}
+          onChange={handleChange}
         />
-
-
-<input
-          type='text'
-          id="input-images-2"
-          className="input-images images-2"
-          placeholder='Enter Images'
-          value={images.imgage2}
-          name='image2'
-          required
-          onChange={imagesChange}
+        <input
+          className="input-imgs imgURL-2"
+          placeholder='Enter Image URL'
+          value={adventure.imgURL[1]}
+          name='imgURL-2'
+          onChange={handleChange}
         />
-<input
-          type='text'
-          id="input-images-3"
-          className="input-images images-3"
-          placeholder='Enter Images'
-          value={images.imgage3}
-          name='image3'
-          required
-          onChange={imagesChange}
-        />
-
-
-        
+        <input
+          className="input-imgs imgURL-3"
+          placeholder='Enter Image URL'
+          value={adventure.imgURL[2]}
+          name='imgURL-3'
+          onChange={handleChange}
+            />
+            </div>
         <button type='submit' className="submit-button">Submit</button>
       </form>
+    </div>
     </Layout>
   )
 }

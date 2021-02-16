@@ -63,6 +63,7 @@ const Adventures = (props) => {
 
   const adventuresJSX = queriedAdventures.map((adventure, index) => (
     <Adventure
+      className="adventure-card"
       _id={adventure._id}
       title={adventure.title}
       category={adventure.category}
@@ -79,7 +80,7 @@ const Adventures = (props) => {
     <Layout onChange={onChange} user={props.user}>
       <Search onSubmit={handleSubmit} onChange={handleSearch} />
       <Sort onSubmit={handleSubmit} onChange={handleSort} />
-      <div className="adventures">{adventuresJSX}</div>
+      <div className="adventure-cards">{adventuresJSX}</div>
     </Layout>
   );
 };
