@@ -2,6 +2,7 @@ import React from 'react'
 import './Nav.css'
 import { NavLink } from 'react-router-dom'
 
+
 const Nav = (props) => {
   const { onChange, filter, setFilter } = props;
 
