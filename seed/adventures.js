@@ -1,7 +1,10 @@
+const bodyParser = require("body-parser");
 const db = require("../db/connection");
 const Adventure = require("../models/adventure");
 
+
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
+
 
 const main = async () => {
   const adventures = [
@@ -196,7 +199,7 @@ const main = async () => {
   ];
 
   await Adventure.insertMany(adventures);
-  console.log("Created an adventure!");
+  console.log(" New Adventures added!");
 };
 const run = async () => {
   await main();
