@@ -1,9 +1,11 @@
 import React from 'react';
 import Layout from '../../components/shared/Layout/Layout';
+import LandingCarousel from '../../components/LandingCarousel/LandingCarousel'
 import { Link } from 'react-router-dom';
+import './Landing.css';
 
 function Landing(props) {
-  const { onChange, filter, setFilter } = props;
+  const { user, onChange, filter, setFilter } = props;
 
   function handleOnClick(category) {
     console.log(category);
@@ -13,7 +15,11 @@ function Landing(props) {
   return (
     <Layout onChange={ onChange } user={props.user}>
       <div>
+
+        {user && <div className="welcome">Welcome, {user.username}</div>}
         <h1>Landing page image goes here</h1>
+        <LandingCarousel />
+
         <div>
           <h1>Featured Carosel goes here</h1>
         </div>
@@ -21,31 +27,31 @@ function Landing(props) {
           <h1>Featured Cards Section</h1>
           <div className="category-cards">
             <Link to="/adventures">
-              <div onClick={() => handleOnClick("All")} className="category-card">All</div>
+              <div onClick={() => handleOnClick("All")} className="category-card all-card">All</div>
             </Link>
             <Link to="/adventures">
-              <div onClick={() => handleOnClick("Beach")} className="category-card">Beach</div>
+              <div onClick={() => handleOnClick("Beach")} className="category-card beach-card">Beach</div>
             </Link>
             <Link to="/adventures">
-              <div onClick={() => handleOnClick("Country Side")} className="category-card">Country Side</div>
+              <div onClick={() => handleOnClick("Country Side")} className="category-card country-card">Country Side</div>
             </Link>
             <Link to="/adventures">
-              <div onClick={() => handleOnClick("Culture and Heritage")} className="category-card">Culture and Heritage</div>
+              <div onClick={() => handleOnClick("Culture and Heritage")} className="category-card culture-card">Culture and Heritage</div>
             </Link>
             <Link to="/adventures">
-              <div onClick={() => handleOnClick("Desert")} className="category-card">Desert</div>
+              <div onClick={() => handleOnClick("Desert")} className="category-card desert-card">Desert</div>
             </Link>
             <Link to="/adventures">
-              <div onClick={() => handleOnClick("Famous Journeys")} className="category-card">Famous Journeys</div>
+              <div onClick={() => handleOnClick("Famous Journeys")} className="category-card journey-card">Famous Journeys</div>
             </Link>
             <Link to="/adventures">
-              <div onClick={() => handleOnClick("Forest")} className="category-card">Forest</div>
+              <div onClick={() => handleOnClick("Forest")} className="category-card forest-card">Forest</div>
             </Link>
             <Link to="/adventures">
-              <div onClick={() => handleOnClick("Mountain")} className="category-card">Mountain</div>
+              <div onClick={() => handleOnClick("Mountain")} className="category-card mountain-card">Mountain</div>
             </Link>
             <Link to="/adventures">
-              <div onClick={() => handleOnClick("Other")} className="category-card">Other</div>
+              <div onClick={() => handleOnClick("Other")} className="category-card other-card">Other</div>
             </Link>
           </div>
         </div>

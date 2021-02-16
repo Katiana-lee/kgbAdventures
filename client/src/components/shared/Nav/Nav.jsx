@@ -33,8 +33,16 @@ const Nav = (props) => {
             <i class="fa fa-search"></i>
             <input type="search" id="search" name="search" placeholder="Adventure Title" ></input>
           </form>
+          <NavLink to="/adventures">
+            <section className="search">
+              <label for="search-input">
+                <i className="fa fa-search"></i>
+                <span className="sr-only">Search Adventures</span>
+              </label>
+              <input id="search-input" placeholder="Search Adventures"/>
+            </section>
+          </NavLink>
         </div>
-
       </div>
     </nav>
   )

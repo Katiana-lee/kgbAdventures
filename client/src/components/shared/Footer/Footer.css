@@ -11,16 +11,16 @@ footer {
 }
 
 .outer-footer {
-  position: absolute;
   left: 0;
   bottom: 0;
   width: 100vw;
+  position: absolute;
 }
 
 .foot-title-links {
   color: white;
   font-family: 'Bitter', sans-serif;
-  font-weight: 100;
+  font-weight: 300;
   font-size: 15px;
 }
 
@@ -30,8 +30,4 @@ footer {
 
 a {
   color: inherit;
-}
-
-.intouch-links {
-  border: red 2px solid;
 }
