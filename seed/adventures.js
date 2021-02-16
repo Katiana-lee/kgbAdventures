@@ -202,7 +202,6 @@ const main = async () => {
   console.log(" New Adventures added!");
 };
 const run = async () => {
-  db.adventures.remove({})
   await main();
   db.close();
 };
