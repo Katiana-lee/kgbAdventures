@@ -41,7 +41,17 @@ const AdventureDetail = (props) => {
 
     <Layout onChange={props.onChange}>
       <div className="wrapper main-content">
-
+        <div className="adventure-detail">
+          <img className="adventure-detail-image" src={adventure.imgURL} alt={adventure.title} />
+          <div className="detail">
+          <div className="title">{adventure.title}</div>
+          <div className="content">{adventure.content}</div>
+          <div className="author">{`Written by: ${adventure.author}`}</div>
+          <div className="button-container">
+            <button className="edit-button"><Link className="edit-link" to={`/adventures/${adventure._id}/edit`}>Edit</Link></button>
+            <button className="delete-button" onClick={() => deleteAdventure(adventure._id)}>Delete</button>          </div>
+          </div>
+        </div>
       </div>
     </Layout>
   )

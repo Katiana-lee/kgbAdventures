@@ -7,13 +7,15 @@
   margin: 2vw;
   font-size: 2.3vw;
   font-weight: 800;
+  opacity: ;
   color: white;
   text-shadow: 0 0 20px #fff, 0 0 30px #f0cfdf, 0 0 40px #f0cfdf,
     0 0 50px #f0cfdf, 0 0 60px #f0cfdf, 0 0 70px #f0cfdf, 0 0 80px #f0cfdf;
 }
 
 .category-card:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
+  /* transform: rotate(360deg); */
   transition: 500ms all ease-in-out;
 }
 
