@@ -8,7 +8,7 @@ import Layout from "../../components/shared/Layout/Layout";
 import { getAdventures } from "../../services/adventures";
 
 const Adventures = (props) => {
-  const { filter, setFilter } = props;
+  const { onChange, filter, setFilter } = props;
   const [allAdventures, setAllAdventures] = useState([]);
   const [queriedAdventures, setQueriedAdventures] = useState([]);
   const [sortType, setSortType] = useState([]);
@@ -17,7 +17,7 @@ const Adventures = (props) => {
     const fetchAdventures = async () => {
       const adventures = await getAdventures();
       setAllAdventures(adventures);
-      if (filter !== "all") {
+      if (filter !== "All") {
         let temp = [];
         adventures.map((adventure) => {
           if (adventure.category.includes(filter)) {
@@ -30,7 +30,7 @@ const Adventures = (props) => {
       }
     };
     fetchAdventures();
-  }, []);
+  }, [filter]);
 
   const handleSort = (type) => {
     setSortType(type);
@@ -54,7 +54,7 @@ const Adventures = (props) => {
 
   const handleSearch = (event) => {
     const newQueriedAdventures = allAdventures.filter((adventure) =>
-      adventure.name.toLowerCase().includes(event.target.value.toLowerCase())
+      adventure.title.toLowerCase().includes(event.target.value.toLowerCase())
     );
     setQueriedAdventures(newQueriedAdventures, () => handleSort(sortType));
   };
@@ -63,6 +63,7 @@ const Adventures = (props) => {
 
   const adventuresJSX = queriedAdventures.map((adventure, index) => (
     <Adventure
+      className="adventure-card"
       _id={adventure._id}
       title={adventure.title}
       category={adventure.category}
@@ -76,10 +77,10 @@ const Adventures = (props) => {
   ));
 
   return (
-    <Layout user={props.user}>
+    <Layout onChange={onChange} user={props.user}>
       <Search onSubmit={handleSubmit} onChange={handleSearch} />
       <Sort onSubmit={handleSubmit} onChange={handleSort} />
-      <div className="adventures">{adventuresJSX}</div>
+      <div className="adventure-cards">{adventuresJSX}</div>
     </Layout>
   );
 };

@@ -1,0 +1,73 @@
+.category-card {
+  width: 28vw;
+  height: 28vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2vw;
+  font-size: 2.3vw;
+  font-weight: 800;
+  opacity: ;
+  color: white;
+  text-shadow: 0 0 20px #fff, 0 0 30px #f0cfdf, 0 0 40px #f0cfdf,
+    0 0 50px #f0cfdf, 0 0 60px #f0cfdf, 0 0 70px #f0cfdf, 0 0 80px #f0cfdf;
+}
+
+.category-card:hover {
+  transform: scale(1.05);
+  /* transform: rotate(360deg); */
+  transition: 500ms all ease-in-out;
+}
+
+.category-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-bottom: 220px;
+}
+
+.all-card {
+  background-image: url("https://scontent.cdninstagram.com/v/t51.2885-15/e35/p480x480/148573219_229528848851369_708308309041310418_n.jpg?_nc_ht=scontent.cdninstagram.com&_nc_cat=1&_nc_ohc=a1NAe7K2ULYAX8C4DtT&tp=1&oh=390121aa4d0ee388780b82542fefae50&oe=605226A7");
+  background-size: 28vw;
+}
+
+.beach-card {
+  background-image: url("https://scontent.cdninstagram.com/v/t51.2885-15/e35/p480x480/141466746_206685417654029_2363415342351035953_n.jpg?_nc_ht=scontent.cdninstagram.com&_nc_cat=105&_nc_ohc=Zax7hFAHxTwAX-TLe3s&tp=1&oh=631357d2efae81c81af95e032da9d43c&oe=6053513D");
+  background-size: 28vw;
+}
+
+.country-card {
+  background-image: url("https://scontent.cdninstagram.com/v/t51.2885-15/e35/p480x480/143341899_1633055990217415_6776780836150031183_n.jpg?_nc_ht=scontent.cdninstagram.com&_nc_cat=107&_nc_ohc=Wn13ATRcdCoAX-OT0o5&tp=1&oh=a7180360424aff37b2b3d8a711fc7822&oe=60531C00");
+  background-size: 28vw;
+}
+
+.culture-card {
+  background-image: url("https://scontent.cdninstagram.com/v/t51.2885-15/e35/p480x480/120202211_176162634052947_2121238246353489635_n.jpg?_nc_ht=scontent.cdninstagram.com&_nc_cat=103&_nc_ohc=rMd3uIdt1K0AX8ydKFb&tp=1&oh=18f7f84685a485b797face84a9f67409&oe=60528716");
+  background-size: 28vw;
+}
+
+.desert-card {
+  background-image: url("https://scontent-sea1-1.cdninstagram.com/v/t51.2885-15/e35/s1080x1080/147552426_4235697473126091_7452000347639848109_n.jpg?_nc_ht=scontent-sea1-1.cdninstagram.com&_nc_cat=103&_nc_ohc=9Y9SFkazKq8AX8nGdlC&tp=1&oh=4fd0bbfb34b7687e9ce26d891907d937&oe=60530370");
+  background-size: 28vw;
+}
+
+.journey-card {
+  background-image: url("https://scontent.cdninstagram.com/v/t51.2885-15/e35/p480x480/84617218_261207348194818_7961894970236598827_n.jpg?_nc_ht=scontent.cdninstagram.com&_nc_cat=110&_nc_ohc=ijf5QxrUtYgAX-7yC6Z&tp=1&oh=e660b7d56d3ec1c570be2a95e06ce33b&oe=605207EA");
+  background-size: 28vw;
+}
+
+.forest-card {
+  background-image: url("https://scontent.cdninstagram.com/v/t51.2885-15/e35/p480x480/91121389_3116670228343313_8425848930216549588_n.jpg?_nc_ht=scontent.cdninstagram.com&_nc_cat=105&_nc_ohc=AN80s6QqzpoAX8r9VGa&tp=1&oh=5ed43358845fc71e46960f272d79a37b&oe=605125B8");
+  background-size: 28vw;
+}
+
+.mountain-card {
+  background-image: url("https://scontent.cdninstagram.com/v/t51.2885-15/e35/p480x480/131011939_389298112336703_4569644253894627232_n.jpg?_nc_ht=scontent.cdninstagram.com&_nc_cat=111&_nc_ohc=vSZALm0hXCUAX-mpr9n&tp=1&oh=3af735bf986e9a7fa469adfc73bcdfa3&oe=604E5891");
+  background-size: 28vw;
+}
+
+.other-card {
+  background-image: url("https://scontent-sea1-1.cdninstagram.com/v/t51.2885-15/e35/41649187_261858281326378_8515852921074297883_n.jpg?_nc_ht=scontent-sea1-1.cdninstagram.com&_nc_cat=110&_nc_ohc=kl1d_n17kKIAX-fN2eO&tp=1&oh=04a9b66818dbad35f00e10062cc4efd3&oe=60502A78");
+  background-size: 28vw;
+}

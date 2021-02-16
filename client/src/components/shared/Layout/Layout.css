@@ -1,0 +1,11 @@
+.layout {
+  /* height: 100%; */
+  position: relative;
+  min-height: 100vh;
+}
+
+/* .layout-children {
+  height: 100%;
+  position: relative;
+  min-height: 107vh;
+} */

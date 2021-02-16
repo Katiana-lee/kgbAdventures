@@ -3,14 +3,17 @@ import "./Layout.css"
 import Nav from '../Nav/Nav'
 import Footer from '../Footer/Footer'
 
-const Layout = (props) => (
-  <div className='layout'>
-    <Nav />
-    <div className='layout-children'>
-      {props.children}
+const Layout = (props) => {
+  console.log(props)
+  return (
+    <div className='layout'>
+      <Nav onChange={props.onChange} user={props.user}/>
+      <div className='layout-children'>
+        {props.children}
+      </div>
+      <Footer user={props.user}/>
     </div>
-    <Footer />
-  </div>
-)
+  );
+}
 
 export default Layout
