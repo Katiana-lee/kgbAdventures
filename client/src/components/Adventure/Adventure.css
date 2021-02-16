@@ -1,3 +1,34 @@
-img {
-  width: 200px;
+.adventure {
+  margin: 20px;
+  overflow: hidden;
+}
+
+.adventure, .adventure-title, .adventure-location {
+  width: 400px;
+}
+
+.adventure-image, .adventure-title, .adventure-location, .adventure-price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.adventure-title {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.adventure-image {
+  height: 400px;
+  /* object-fit: cover; */
+}
+
+.adventure-location {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.adventure-price {
+  font-size: 18px;
+  font-weight: 600;
 }

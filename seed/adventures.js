@@ -88,13 +88,8 @@ const main = async () => {
       ],
     },
     {
-
-      title: "Culture and Heritage, Desert.., Mountain",
-      location: "Machu Picchu Peru",
-      category: ["Culture and Heritage", "Desert", "Mountain"],
-      price: "FREE",
       title: "Ultimate Dolomites Adventure",
-      location: "",
+      location: "Dolomite, Italy",
       category: ["Mountain", "Country Side", "Other"],
       price: "27370.41",
       description:
