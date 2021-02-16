@@ -1,0 +1,22 @@
+.search {
+  height: 40px;
+  width: 500px;
+  margin: auto;
+  border: 1px solid gray;
+  padding: 10px;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+#search-input {
+  border: none;
+  appearance: textfield;
+  width: 400px;
+}
+
+.fa-search {
+  padding-right: 5px;
+  padding-left: 5px;
+}
