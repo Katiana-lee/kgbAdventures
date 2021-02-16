@@ -12,7 +12,7 @@ return (
     <div className="adventure-title">{title}</div>
       <div className="adventure-location">{location}</div>
       <div className="adventure-price">
-        <i class="fa fa-rub" aria-hidden="true"></i>{price}
+        <i class="fa fa-rub" aria-hidden="true"></i> {price}
       </div>
   </Link>
 </>
