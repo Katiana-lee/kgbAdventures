@@ -2,6 +2,7 @@ import React from 'react'
 import './Nav.css'
 import { NavLink } from 'react-router-dom'
 
+
 const Nav = (props) => {
   const { onChange, filter, setFilter } = props;
 
@@ -30,7 +31,7 @@ const Nav = (props) => {
           <NavLink className="about-us link" to="/about-us">About Us</NavLink>
           <form className="search-link link">
             <i class="fa fa-search"></i>
-            <input type="search" id="search" name="search" placeholder="Adventure Title"></input>
+            <input type="search" id="search" name="search" placeholder="Adventure Title" ></input>
           </form>
         </div>
 
