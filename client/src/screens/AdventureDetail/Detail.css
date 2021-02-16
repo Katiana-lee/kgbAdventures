@@ -29,3 +29,7 @@ body, input, textarea, button, select {
     display: table;
     clear: both;
 }
+
+.adventure-detail img {
+  width: 200px;
+}
