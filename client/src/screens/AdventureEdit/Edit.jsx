@@ -43,7 +43,10 @@ const handleSubmit = async (event) => {
 }
 
 if (isUpdated) {
+
+  return <Redirect to={`/adventures/${id}`} />
   return <Redirect to={`/adventures/${props.match.params.id}`} />
+
 }
 
 

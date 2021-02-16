@@ -1,7 +1,10 @@
+const bodyParser = require("body-parser");
 const db = require("../db/connection");
 const Adventure = require("../models/adventure");
 
+
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
+
 
 const main = async () => {
   const adventures = [
@@ -89,7 +92,11 @@ const main = async () => {
     },
     {
       title: "Ultimate Dolomites Adventure",
+<<<<<<< HEAD
       location: "Dolomite, Italy",
+=======
+      location: "Dolomites, Italy",
+>>>>>>> 61bacc4330580d3f5c02eeb0ce59697be52073b9
       category: ["Mountain", "Country Side", "Other"],
       price: "27370.41",
       description:
@@ -196,7 +203,7 @@ const main = async () => {
   ];
 
   await Adventure.insertMany(adventures);
-  console.log("Created an adventure!");
+  console.log(" New Adventures added!");
 };
 const run = async () => {
   await main();

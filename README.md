@@ -1,7 +1,7 @@
 # KGB Adventures
 
 
-## Project Description
+## Project Description...
 
 KGB Adventures is a travel website that helps plan the adventure of your dreams. The user has the options to sign in, sign out, and sign up. Once logged in, the user will have the ability to edit and delete an adventure as well as add an excursion. This MERN stack app is website and mobile friendly.
 
