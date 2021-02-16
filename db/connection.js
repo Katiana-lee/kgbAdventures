@@ -4,7 +4,6 @@ let MONGODB_URI = process.env.PROD_MONGODB || 'mongodb://127.0.0.1:27017/adventu
 
 mongoose
   .connect(MONGODB_URI, { useUnifiedTopology: true, useNewUrlParser: true })
-  .dropCollection('adventure')
     .then(() => console.log('Successfully connected to MongoDB.'))
     .catch(e => console.error('Connection error', e.message))
 
