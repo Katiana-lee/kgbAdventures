@@ -11,7 +11,8 @@ const getToken = () => {
 
 const api = axios.create({
     baseURL: process.env.NODE_ENV === 'production'
-        ? 'https://sei-adventures-api.herokuapp.com/api'
+    ? 'https://sei-adventures-api.herokuapp.com/api'
+    // : 'https://sei-adventures-api.herokuapp.com/api'
         : 'http://localhost:3000/api'
 })
 
