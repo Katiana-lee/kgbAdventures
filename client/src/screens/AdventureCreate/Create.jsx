@@ -99,6 +99,7 @@ const AdventureCreate = (props) => {
   return (
     <Layout onChange={props.onChange} user={props.user}>
       <h1 className="create-title">CREATE NEW ADVENTURE</h1>
+      <div className=''>
       <form className="create-form" onSubmit={handleSubmit}>
         
         {/* Title */}
@@ -245,7 +246,8 @@ const AdventureCreate = (props) => {
 
         
         <button type='submit' className="submit-button">Submit</button>
-      </form>
+        </form>
+        </div>
     </Layout>
   )
 }

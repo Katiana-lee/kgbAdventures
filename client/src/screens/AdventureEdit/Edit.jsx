@@ -103,7 +103,7 @@ useEffect(() => {
   }
 
 if (isUpdated) {
-  return <Redirect to={`/adventures`} />
+  return <Redirect to={`/adventures/${id}`} />
 }
 
 
