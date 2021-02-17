@@ -1,0 +1,20 @@
+.image-container {
+  position: relative;
+  width: 100%;
+}
+
+#carousel-imgs {
+  height: 500px;
+  width: 350px;
+  margin: 50px;
+}
+
+.image-text {
+  position: absolute;
+  bottom: 80px;
+  left: 75px;
+  width: 100%;
+  color: white;
+  text-shadow: 0 1px 0 black;
+  font-weight: 900;
+}
