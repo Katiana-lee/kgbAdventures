@@ -1,4 +1,9 @@
-
+footer{
+  padding: 20px;
+ 
+  position: absolute;
+  min-width: 100%;
+}
 
 .column {
 float: left;
@@ -41,7 +46,7 @@ color: grey;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  max-width: 100%;
+  width: 200px;
   border-radius: 50%;
   height: auto;
   padding: 5px;
@@ -57,6 +62,11 @@ background-color: #000;
 text-align: center;
 cursor: pointer;
 width: 100%;
+}
+
+.linkedin {
+padding: 10px;
+border: black;
 }
 
 
