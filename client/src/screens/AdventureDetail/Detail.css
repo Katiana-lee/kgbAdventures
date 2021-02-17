@@ -9,22 +9,138 @@
 .detail-title {
   font-size: 40px;
   font-weight: 800;
+  color: var(--tone5);
 }
 
 .detail-location {
   font-size: 24px;
+  display: inline-block;
   font-weight: 500;
+  color: var(--tone3);
+  transition: all 0.15s ease-in-out 0s;
+  margin-top: 10px;
+}
+
+.detail-location:hover {
+  color: var(--tone1);
+  cursor: pointer;
+  text-shadow: 0 0 1px var(--tone4), 0 0 2px var(--tone4), 0 0 3px var(--tone4), 0 0 4px var(--tone4)
 }
 
 .detail-price {
-  font-size: 20px;
+  font-size: 24px;
+  display: inline-block;
   padding-top: 5px;
-  font-weight: 500;
+  font-weight: 800;
+  color: var(--tone1);
+  transition: all 0.15s ease-in-out 0s;
+  margin-right: 50px;
+  margin-left: 5px;
+  text-shadow: 0 0 1px var(--tone5), 0 0 2px var(--tone5), 0 0 3px var(--tone4),
+    0 0 4px var(--tone4);
 }
 
-/* .detail-content, .detail-images {
-  width: 50%;
+.detail-price:hover {
+  color: var(--tone1);
+  cursor: pointer;
+  text-shadow: 0 0 5px var(--tone5), 0 0 10px var(--tone5),
+    0 0 15px var(--tone4), 0 0 20px var(--tone4), 0 0 25px var(--tone3),
+    0 0 30px var(--tone3), 0 0 35px var(--tone2), 0 0 40px var(--tone2);
+}
+
+.add-to-cart {
+  border: 2px solid var(--tone5);
+  background: var(--tone1);
+  color: var(--tone5);
+  transition: all 0.15s ease-in-out 0s;
+  display: inline-block;
+  font-weight: 700;
+  padding: 10px 35px;
+  letter-spacing: 0px;
+  font-size: 18px;
+  margin: 30px 0 30px 0;
+}
+
+.add-to-cart:hover, .edit-delete-button:hover {
+  border: 2px solid var(--tone4);
+  background: var(--tone4);
+  color: var(--tone2);
+  cursor: pointer;
+}
+
+.detail-price-block {
+  display: inline;
+}
+
+.detail-center-divider {
+  width: 200px;
+}
+
+.span-title {
+  font-weight: 700;
+}
+
+.detail-description p {
+  margin-top: 5px;
+}
+
+.detail-description,
+.detail-details {
+  color: var(--tone4);
+  margin-bottom: 20px;
+}
+
+.loader {
   display: flex;
   justify-content: center;
   align-items: center;
-} */
+}
+
+.detail-details ul {
+  margin-top: 5px;
+}
+
+.fake-footer {
+  height: 200px;
+}
+
+.other-images {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.other-images img {
+  height: 100px;
+}
+
+.other-images img:hover {
+  cursor: pointer;
+}
+
+.adventure-detail-image {
+  height: 650px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.edit-delete-button {
+  cursor: pointer;
+  border: 2px solid var(--tone5);
+  background: var(--tone1);
+  color: var(--tone5);
+  transition: all 0.15s ease-in-out 0s;
+  font-weight: 700;
+  padding: 10px 0 10px 0;
+  letter-spacing: 0px;
+  font-size: 16px;
+  margin: 10px 0 10px 0;
+  width: 100px;
+  text-align: center;
+}

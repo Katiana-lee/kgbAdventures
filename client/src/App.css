@@ -1,7 +1,11 @@
 :root {
   --tone1: #F6F6F6;
-  --tone2: #C7FFD8;
-  --tone3: #98DED9;
-  --tone4: #525edd;
+  --tone2: #40E0D0;
+  --tone3: #00CED1;
+  --tone4: #27445C;
   --tone5: #030629;
+}
+
+* {
+  font-family: 'Liberator', sans-serif;
 }
