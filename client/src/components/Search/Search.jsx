@@ -11,7 +11,8 @@ const Search = (props) => {
                 id="search-input"
                 value={props.value}
                 onChange={(e) => props.onChange(e)}
-          name="Search"
+                name="search"
+                placeholder="search"
                 type="text"
                 autoFocus
             />

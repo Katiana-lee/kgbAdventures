@@ -24,33 +24,21 @@ const AdventureDetail = (props) => {
   }
 
   return (
-    // <Layout>
-    //   <div className="adventure-detail">
-    //     <img className="adventure-detail-image" src={adventure.imgURL} alt={adventure.title} />
-    //     <div className="detail">
-    //       <div className="title">{adventure.title}</div>
-    //       <div className="content">{adventure.content}</div>
-    //       <div className="author">{`Written by: ${adventure.author}`}</div>
-    //       <div className="button-container">
-    //         <button className="edit-button"><Link className="edit-link" to={`/adventures/${adventure._id}/edit`}>Edit</Link></button>
-    //         <button className="delete-button" onClick={() => deleteAdventure(adventure._id)}>Delete</button>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </Layout>
+    <Layout>
+      <div className="adventure-detail">
+        <div className="detail-content">
+          <div className="detail-title">{adventure.title}</div>
+          <div className="detail-location">{adventure.location}</div>
+          <div className="detail-price"><i class="fa fa-rub" aria-hidden="true"></i> {adventure.price}</div>
+          <div className="detail-description">{adventure.description}</div>
 
-    <Layout onChange={props.onChange}>
-      <div className="wrapper main-content">
-        <div className="adventure-detail">
-          <img className="adventure-detail-image" src={adventure.imgURL} alt={adventure.title} />
-          <div className="detail">
-          <div className="title">{adventure.title}</div>
-          <div className="content">{adventure.content}</div>
-          <div className="author">{`Written by: ${adventure.author}`}</div>
           <div className="button-container">
             <button className="edit-button"><Link className="edit-link" to={`/adventures/${adventure._id}/edit`}>Edit</Link></button>
-            <button className="delete-button" onClick={() => deleteAdventure(adventure._id)}>Delete</button>          </div>
+            <button className="delete-button" onClick={() => deleteAdventure(adventure._id)}>Delete</button>
           </div>
+        </div>
+        <div className="detail-images">
+          <img className="adventure-detail-image" src={adventure.imgURL[0]} alt={adventure.title} />
         </div>
       </div>
     </Layout>
