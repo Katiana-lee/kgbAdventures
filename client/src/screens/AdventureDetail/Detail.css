@@ -61,7 +61,7 @@
   margin: 30px 0 30px 0;
 }
 
-.add-to-cart:hover {
+.add-to-cart:hover, .edit-delete-button:hover {
   border: 2px solid var(--tone4);
   background: var(--tone4);
   color: var(--tone2);
@@ -122,4 +122,25 @@
 
 .adventure-detail-image {
   height: 650px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.edit-delete-button {
+  cursor: pointer;
+  border: 2px solid var(--tone5);
+  background: var(--tone1);
+  color: var(--tone5);
+  transition: all 0.15s ease-in-out 0s;
+  font-weight: 700;
+  padding: 10px 0 10px 0;
+  letter-spacing: 0px;
+  font-size: 16px;
+  margin: 10px 0 10px 0;
+  width: 100px;
+  text-align: center;
 }

@@ -25,6 +25,15 @@ const AdventureDetail = (props) => {
       return <h1 className="loader">Loading...</h1>
   }
 
+  const editDelete = (
+    <>
+      <div className="button-container">
+        <Link to={`/adventures/${adventure._id}/edit`}><div className="edit-delete-button">EDIT</div></Link>
+        <Link to={`/adventures`}><div className="edit-delete-button" onClick={() => deleteAdventure(adventure._id)}>DELETE</div></Link>
+      </div>
+    </>
+  );
+
   const detailList = adventure.details.map((detail, index) => (
     <li className="detail-single">
       {detail}
@@ -42,7 +51,7 @@ const AdventureDetail = (props) => {
   ));
 
   return (
-    <Layout>
+    <Layout user={props.user}>
       <div className="adventure-detail">
         <div className="detail-content">
           <div className="detail-title">{adventure.title}</div>
@@ -61,10 +70,7 @@ const AdventureDetail = (props) => {
             <span className="span-title">Details:</span>
             <ul>{detailList}</ul>
           </div>
-          <div className="button-container">
-            <button className="edit-button"><Link className="edit-link" to={`/adventures/${adventure._id}/edit`}>Edit</Link></button>
-            <button className="delete-button" onClick={() => deleteAdventure(adventure._id)}>Delete</button>
-          </div>
+          {props.user ? editDelete : <></>}
         </div>
         <div className="detail-center-divider"></div>
         <div className="detail-images">
