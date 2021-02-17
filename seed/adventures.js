@@ -92,11 +92,7 @@ const main = async () => {
     },
     {
       title: "Ultimate Dolomites Adventure",
-<<<<<<< HEAD
-      location: "Dolomite, Italy",
-=======
       location: "Dolomites, Italy",
->>>>>>> 61bacc4330580d3f5c02eeb0ce59697be52073b9
       category: ["Mountain", "Country Side", "Other"],
       price: "27370.41",
       description:

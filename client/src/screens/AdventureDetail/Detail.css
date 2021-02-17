@@ -1,35 +1,30 @@
-.main-content {
-  display: block;
-  padding-bottom: 50px;
+.adventure-detail {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 40px;
 }
 
-.wrapper {
-  *zoom: 1;
-  max-width: 1660px;
-  margin: 0 auto;
-  padding: 0 15px;
+.detail-title {
+  font-size: 40px;
+  font-weight: 800;
 }
 
-*, input, :before, :after {
-    box-sizing: border-box;
+.detail-location {
+  font-size: 24px;
+  font-weight: 500;
 }
 
-body, input, textarea, button, select {
-  font-size: 16px;
-  line-height: 1.6;
-  font-family: 'Bitter', sans-serif;
-  color: #5b5757;
-  font-weight: 400;
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-size-adjust: 100%;
+.detail-price {
+  font-size: 20px;
+  padding-top: 5px;
+  font-weight: 500;
 }
 
-.wrapper:after {
-    content: '';
-    display: table;
-    clear: both;
-}
-
-.adventure-detail img {
-  width: 200px;
-}
+/* .detail-content, .detail-images {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
