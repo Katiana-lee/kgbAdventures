@@ -117,7 +117,7 @@ if (isUpdated) {
       <form className="create-form" onSubmit={handleSubmit}>
         
         {/* Title */}
-        <label for="input-title">Title:</label>
+        <label for="input-title"></label>
         <input
           type='text'
           id="input-title"
@@ -131,7 +131,7 @@ if (isUpdated) {
         />
 
         {/* Location */}
-        <label for="input-location">Location:</label>
+        <label for="input-location"></label>
         <input
           id="input-location"
           className="input-location"
@@ -143,14 +143,15 @@ if (isUpdated) {
         />
 
         {/* Category */}
-        <input type='checkbox' id='option1' name='beach' value="Beach" onChange={arrayChange}></input>
+        <div className="cat-buttons">
+        <input type='checkbox'  id='option1' name='beach' value="Beach" onChange={arrayChange}></input>
         <label for="beach">Beach</label>
         <input type='checkbox' id='option2' name='country side' value="Country Side" onChange={arrayChange}></input>
         <label for="country side">Country Side</label>
         <input type='checkbox' id='option3' name='culture and heritage' value="Culture and Heritage" onChange={arrayChange}></input>
         <label for="culture and heritage">Culture and Heritage</label>
         <input type='checkbox' id='option4' name='desert' value="Desert" onChange={arrayChange}></input>
-        <label for="desert">Desert</label>
+        <label for="desert">Desert</label> 
         <input type='checkbox' id='option5' name='famous journeys' value='Famous Journeys' onChange={arrayChange}></input>
         <label for="famous journeys">Famous Journeys</label>
         <input type='checkbox' id='option6' name='forest' value='Forest' onChange={arrayChange}></input>
@@ -158,8 +159,9 @@ if (isUpdated) {
         <input type='checkbox' id='option7' name='mountain' value="Mountain" onChange={arrayChange}></input>
         <label for="mountain">Mountain</label>
         <input type='checkbox' id='option8' name='other' value='Other' onChange={arrayChange}></input>
-        <label for="other">Other</label>
-
+          <label for="other">Other</label>
+          
+</div>
     
       
 
@@ -177,7 +179,7 @@ if (isUpdated) {
         />
 
         {/* Pricing */}
-        <label for="input-price">Price:</label>
+        <label for="input-price"></label>
         <input
           id="input-price"
           type='number'
@@ -190,7 +192,7 @@ if (isUpdated) {
         />
 
         {/* Details */}
-        <label for="input-details">details:</label>
+        <label for="input-details"></label>
         <input
           type='text'
           id="input-details-1"
@@ -223,7 +225,7 @@ if (isUpdated) {
         />
 
         {/* Images */}
-        <label for="input-images">details:</label>
+        <label for="input-images"></label>
         <input
           type='text'
           id="input-images-1"
