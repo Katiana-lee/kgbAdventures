@@ -24,7 +24,8 @@
 .detail-location:hover {
   color: var(--tone1);
   cursor: pointer;
-  text-shadow: 0 0 1px var(--tone4), 0 0 2px var(--tone4), 0 0 3px var(--tone4), 0 0 4px var(--tone4)
+  text-shadow: 0 0 1px var(--tone4), 0 0 2px var(--tone4), 0 0 3px var(--tone4),
+    0 0 4px var(--tone4);
 }
 
 .detail-price {
@@ -61,7 +62,8 @@
   margin: 30px 0 30px 0;
 }
 
-.add-to-cart:hover, .edit-delete-button:hover {
+.add-to-cart:hover,
+.edit-delete-button:hover {
   border: 2px solid var(--tone4);
   background: var(--tone4);
   color: var(--tone2);
@@ -127,7 +129,7 @@
 .button-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: left;
 }
 
 .edit-delete-button {
@@ -140,7 +142,7 @@
   padding: 10px 0 10px 0;
   letter-spacing: 0px;
   font-size: 16px;
-  margin: 10px 0 10px 0;
+  margin: 10px;
   width: 100px;
   text-align: center;
 }

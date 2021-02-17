@@ -42,8 +42,7 @@ const AdventureDetail = (props) => {
 
   const switcheroo = (e, image) => {
     e.preventDefault();
-    console.log(image);
-    setMainImage(image);
+    setMainImage(image.image.toString());
   }
 
   const imageList = adventure.imgURL.map((image, index) => (
