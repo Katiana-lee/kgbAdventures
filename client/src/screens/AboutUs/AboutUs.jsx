@@ -7,7 +7,7 @@ function AboutUs(props) {
   return (
     <Layout onChange={props.onChange}>
       <div class="about-section">
-        <h1>About Us Page</h1>
+        <h1>About Us</h1>
         <p>Some text about who we are and what we do.</p>
       </div>
 
@@ -20,6 +20,7 @@ function AboutUs(props) {
               alt="Ben"
             />
             <div className="container">
+              
               <h2>Ben A</h2>
               <p className="title">Software Engineer</p>
               <p>
