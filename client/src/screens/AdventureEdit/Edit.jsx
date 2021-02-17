@@ -5,6 +5,7 @@ import Layout from '../../components/shared/Layout/Layout'
 import { getAdventure, updateAdventure } from '../../services/adventures'
 
 const Edit = (props) => {
+  
   const [d, setD] = useState({
     detail1: '',
     detail2: '',
@@ -38,11 +39,13 @@ const Edit = (props) => {
 
 useEffect(() => {
         const fetchAdventure = async () => {
-            const product = await getAdventure(id)
+            const adventure = await getAdventure(id)
             setAdventure(adventure)
         }
         fetchAdventure()
-    }, [id])
+}, [])
+  
+  
 
 
   const handleChange = (event) => {
@@ -88,8 +91,9 @@ useEffect(() => {
     event.preventDefault()
     let imagesToAdd = [images.image1,images.image2,images.image3]
     let detailsToAdd = [d.detail1, d.detail2, d.detail3]
-    adventure.imgURL.push(imagesToAdd)
-    adventure.details.push(detailsToAdd)
+    console.log('this is details to add', detailsToAdd)
+    adventure.imgURL.push(...imagesToAdd)
+    adventure.details.push(...detailsToAdd)
     setAdventure({
       ...adventure,
       
@@ -118,7 +122,7 @@ if (isUpdated) {
           type='text'
           id="input-title"
           className="input-title"
-          placeholder='Enter Title'
+          placeholder={adventure.title}
           value={adventure.title}
           name='title'
           required
@@ -131,7 +135,7 @@ if (isUpdated) {
         <input
           id="input-location"
           className="input-location"
-          placeholder='Enter Location'
+          placeholder={adventure.location}
           value={adventure.location}
           name='location'
           required
@@ -191,7 +195,7 @@ if (isUpdated) {
           type='text'
           id="input-details-1"
           className="input-details details-1"
-          placeholder='Enter Details'
+          placeholder={adventure.details[0]}
           value={d.detail1}
           name='detail1'
           required
@@ -202,7 +206,7 @@ if (isUpdated) {
         <input
           id='input-details-2'
           className="input-details details-2"
-          placeholder='Enter Details'
+          placeholder={adventure.details[1]}
           value={d.detail2}
           name='detail2'
           required
@@ -211,7 +215,7 @@ if (isUpdated) {
         <input
           id='input-details-3'
           className="input-details details-3"
-          placeholder='Enter Details'
+          placeholder={adventure.details[2]}
           value={d.detail3}
           name='detail3'
           required
@@ -224,7 +228,7 @@ if (isUpdated) {
           type='text'
           id="input-images-1"
           className="input-images images-1"
-          placeholder='Enter Images'
+          placeholder={adventure.imgURL[0]}
           value={images.imgage1}
           name='image1'
           required
@@ -236,7 +240,7 @@ if (isUpdated) {
           type='text'
           id="input-images-2"
           className="input-images images-2"
-          placeholder='Enter Images'
+          placeholder={adventure.imgURL[1]}
           value={images.imgage2}
           name='image2'
           required
@@ -246,7 +250,7 @@ if (isUpdated) {
           type='text'
           id="input-images-3"
           className="input-images images-3"
-          placeholder='Enter Images'
+          placeholder={adventure.imgURL[2]}
           value={images.imgage3}
           name='image3'
           required
