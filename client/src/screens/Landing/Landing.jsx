@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '../../components/shared/Layout/Layout';
 import { Link } from 'react-router-dom';
+import LandingCarousel from '../../components/LandingCarousel/LandingCarousel'
 import './Landing.css';
 
 function Landing(props) {
@@ -16,11 +17,11 @@ function Landing(props) {
       <div>
 
         {user && <div className="welcome">Welcome, {user.username}</div>}
-        <h1>Landing page image goes here</h1>
+        
        
 
         <div>
-          <h1>Featured Carosel goes here</h1>
+          <LandingCarousel />
         </div>
         <div className="category-container">
           <h1>Featured Cards Section</h1>
