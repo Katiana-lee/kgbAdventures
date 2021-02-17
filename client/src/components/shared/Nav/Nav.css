@@ -1,10 +1,11 @@
 .nav {
-  border-bottom: 2px solid black;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  background: var(--tone4);
+  color: var(--tone1);
 }
 
 .links {
