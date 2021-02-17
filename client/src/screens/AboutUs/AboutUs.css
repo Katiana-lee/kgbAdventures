@@ -10,12 +10,19 @@ float: left;
 width: 33%;
 margin-bottom: 16px;
 padding: 0 8px;
+display: flex;
+/* flex-direction: row-reverse; */
+
 }
 
 .card {
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 margin: 8px;
 /* width: 100% */
+/* display: flex;
+flex-direction: row; */
+
+
 }
 
 .about-section {
@@ -31,6 +38,7 @@ margin: 0;
 
 .container {
 padding: 0 16px;
+
 }
 
 .container:after, .row:after {
@@ -64,11 +72,23 @@ cursor: pointer;
 width: 100%;
 }
 
-.linkedin {
-padding: 10px;
-border: black;
+.icons{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: right;
+  /* flex-direction: row; */
+  padding: 2px;
+  cursor: pointer;
+  width: 100%;
 }
 
+.linkedin:hover, .github:hover{
+  transform: scale(1.05);
+  /* transform: rotate(360deg); */
+  transition: 500ms all ease-in-out;
+  color: #98DED9;;
+}
 
 .button:hover {
 background-color: #161D6F;

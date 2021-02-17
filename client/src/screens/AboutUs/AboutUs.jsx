@@ -17,7 +17,7 @@ function AboutUs(props) {
             <img
               className="image"
               src="https://ca.slack-edge.com/T0351JZQ0-U01F58DPXCP-78022d5ef928-512"
-              alt="Jane"
+              alt="Ben"
             />
             <div className="container">
               <h2>Ben A</h2>
@@ -28,13 +28,16 @@ function AboutUs(props) {
                 aut, expedita consequatur non suscipit, laudantium ab sed ut,
                 sit iusto quibusdam?
               </p>
-              <p>email:</p>
-              <a href="https://www.google.com/" target="_blank">
+             <div className="icons">
+              <a className="github" href="https://github.com/ben-azevedo/" target="_blank">
+              <i class="fa fa-github" aria-hidden="true"></i>
+              </a>
+              <a className="linkedin" href="https://www.linkedin.com/in/grady-king/" target="_blank">
                 <i class="fa fa-linkedin" aria-hidden="true"></i>
               </a>
-
+</div>
               <p>
-                <button className="button">Contact</button>
+                {/* <button className="button">Contact</button> */}
               </p>
             </div>
           </div>
@@ -45,7 +48,7 @@ function AboutUs(props) {
             <img
               className="image"
               src="https://res.cloudinary.com/briandanger/image/upload/v1568954107/github_fpykxh.png"
-              alt="Mike"
+              alt="Grady"
             />
             <div className="container">
               <h2>Grady K</h2>
@@ -56,12 +59,16 @@ function AboutUs(props) {
                 quae vero aspernatur, aperiam ratione aliquid ipsum consequatur
                 illum! Deleniti voluptatum temporibus quaerat atque sapiente.
               </p>
-              <p>email:</p>
-              <a href="https://github.com/gradyki/" target="_blank">
-                Github
+              <div className="icons">
+              <a className="github"href="https://github.com/gradyki/" target="_blank">
+                <i class="fa fa-github" aria-hidden="true"></i>
               </a>
+              <a className="linkedin"href="https://www.linkedin.com/in/grady-king/" target="_blank">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                </div>
               <p>
-                <button className="button">Contact</button>
+                {/* <button className="button">Contact</button> */}
               </p>
             </div>
           </div>
@@ -72,7 +79,7 @@ function AboutUs(props) {
             <img
               className="image"
               src="https://res.cloudinary.com/briandanger/image/upload/v1568954107/github_fpykxh.png"
-              alt="John"
+              alt="Katiana"
             />
             <div className="container">
               <h2>Katiana L</h2>
@@ -83,12 +90,16 @@ function AboutUs(props) {
                 optio laboriosam recusandae dolorem totam a similique dolor quis
                 reiciendis maxime iste voluptate laborum commodi.
               </p>
-              <p>email:</p>
-              <a href="https://github.com/Katiana-lee/" target="_blank">
-                Github
+              <div className="icons">
+              <a className="github"href="https://github.com/Katiana-lee/" target="_blank">
+              <i class="fa fa-github" aria-hidden="true"></i>
               </a>
+              <a className="linkedin"href="https://www.linkedin.com/in/grady-king/" target="_blank">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                </div>
               <p>
-                <button className="button">Contact</button>
+                {/* <button className="button">Contact</button> */}
               </p>
             </div>
           </div>

@@ -180,7 +180,7 @@ if (isUpdated) {
           onChange={handleChange}
             />
             </div>
-        <button type='submit' className="submit-button">Submit</button>
+        <button type='submit' className="save-button">Submit</button>
       </form>
     </div>
     </Layout>
