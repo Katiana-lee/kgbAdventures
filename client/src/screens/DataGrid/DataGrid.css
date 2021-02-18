@@ -1,0 +1,10 @@
+.title h1 {
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.grid {
+  margin-left: 25px;
+  margin-right: 25px;
+}
