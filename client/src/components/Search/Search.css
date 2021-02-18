@@ -3,34 +3,23 @@
   height: 50px;
   width: 500px;
   margin: auto;
-  /* border: 1px solid gray; */
   padding: 10px;
-  /* padding-top: 25px;
-  padding-bottom: 5px; */
   border-radius: 50px;
   margin-top: 40px;
- 
+ margin-bottom: 20px;
   justify-content: center;
   align-items: center;
-  /* display: flex;
-  position:relative;   */
-/* left:20%;
-top:50%;
-width:30%; */
 
 }
 
 #search-input {
   background-color: var(--tone1);
   border: none;
-  /* appearance: textfield; */
   width: 400px;
   outline: none;
   cursor:pointer;
   
 }
-
-
 
 .fa-search {
   padding-right: 5px;
@@ -38,7 +27,6 @@ width:30%; */
 }
 .search:hover {
   transform: scale(1.02);
-  /* transform: rotate(360deg); */
   transition: 500ms all ease-in-out;
 color: #40E0D0;
 border: 2px solid var(--tone4);
