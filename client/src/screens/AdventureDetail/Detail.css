@@ -1,8 +1,7 @@
-.nav {
- margin-top: 0px;
-  position: sticky;
-  top: 90;
+.detail-layout {
+  margin: 0px auto 0px auto;
 }
+
 
 
 .adventure-detail {
