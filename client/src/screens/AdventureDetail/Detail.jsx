@@ -61,7 +61,7 @@ const AdventureDetail = (props) => {
   ));
 
   return (
-    <Layout onChange={props.onChange} user={props.user}>
+    <Layout className="detail-layout"onChange={props.onChange} user={props.user}>
       <div className="adventure-detail">
         <div className="detail-content">
           <div className="detail-title">{adventure.title}</div>

@@ -6,6 +6,7 @@ import AdventureEdit from './screens/AdventureEdit/Edit'
 import Adventures from './screens/Adventures/Adventures'
 import AdventureCreate from './screens/AdventureCreate/Create'
 import AboutUs from './screens/AboutUs/AboutUs'
+import DataGrid from './screens/DataGrid/DataGrid'
 import ShoppingCart from './screens/ShoppingCart/ShoppingCart'
 import SignIn from './screens/SignIn/SignIn'
 import SignOut from './screens/SignOut/SignOut'
@@ -70,7 +71,10 @@ function App() {
       </Route>
       <Route path="/shopping-cart">
         <ShoppingCart cart={cart} setCart={setCart} onChange={onChange}/>
-      </Route>
+        </Route>
+        <Route path='/inventory'>
+          <DataGrid />
+        </Route>
     </Switch>
   </div>
   );

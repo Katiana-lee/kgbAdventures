@@ -1,3 +1,9 @@
+.detail-layout {
+  margin: 0px auto 0px auto;
+}
+
+
+
 .adventure-detail {
   display: flex;
   flex-direction: row;

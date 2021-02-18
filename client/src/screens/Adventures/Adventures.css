@@ -11,12 +11,14 @@
   color: white;
   text-shadow: 0 0 20px #fff, 0 0 30px #f0cfdf, 0 0 40px #f0cfdf,
     0 0 50px #f0cfdf, 0 0 60px #f0cfdf, 0 0 70px #f0cfdf, 0 0 80px #f0cfdf;
+    
 }
 
 .adventure-card:hover {
   transform: scale(1.05);
   /* transform: rotate(360deg); */
   transition: 500ms all ease-in-out;
+
 }
 
 .adventure-cards {
@@ -26,4 +28,10 @@
   justify-content: space-around;
   padding-bottom: 220px;
   background-size: 28vw;
+ 
+}
+
+.adventure-title, .adventure-price, .adventure-location {
+  color: var(--tone5);
+  margin-top: 4px;
 }

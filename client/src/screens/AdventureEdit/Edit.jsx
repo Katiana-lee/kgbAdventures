@@ -113,11 +113,11 @@ if (isUpdated) {
 
   return (
     <Layout onChange={props.onChange} user={props.user}>
-      <h1 className="create-title">Edit ADVENTURE</h1>
+      <h1 className="create-title">EDIT ADVENTURE</h1>
       <form className="create-form" onSubmit={handleSubmit}>
         
         {/* Title */}
-        <label for="input-title"></label>
+        <label className="label" for="input-title">Title:</label>
         <input
           type='text'
           id="input-title"
@@ -131,7 +131,7 @@ if (isUpdated) {
         />
 
         {/* Location */}
-        <label for="input-location"></label>
+        <label className="label"for="input-location">Location:</label>
         <input
           id="input-location"
           className="input-location"
@@ -144,29 +144,29 @@ if (isUpdated) {
 
         {/* Category */}
         <div className="cat-buttons">
+        <label for="beach">Beach</label> {"\n"}
         <input type='checkbox'  id='option1' name='beach' value="Beach" onChange={arrayChange}></input>
-        <label for="beach">Beach</label>
+        <label for="country side">Country Side</label> {"\n"}
         <input type='checkbox' id='option2' name='country side' value="Country Side" onChange={arrayChange}></input>
-        <label for="country side">Country Side</label>
-        <input type='checkbox' id='option3' name='culture and heritage' value="Culture and Heritage" onChange={arrayChange}></input>
         <label for="culture and heritage">Culture and Heritage</label>
-        <input type='checkbox' id='option4' name='desert' value="Desert" onChange={arrayChange}></input>
+        <input type='checkbox' id='option3' name='culture and heritage' value="Culture and Heritage" onChange={arrayChange}></input>
         <label for="desert">Desert</label> 
-        <input type='checkbox' id='option5' name='famous journeys' value='Famous Journeys' onChange={arrayChange}></input>
+        <input type='checkbox' id='option4' name='desert' value="Desert" onChange={arrayChange}></input>
         <label for="famous journeys">Famous Journeys</label>
-        <input type='checkbox' id='option6' name='forest' value='Forest' onChange={arrayChange}></input>
+        <input type='checkbox' id='option5' name='famous journeys' value='Famous Journeys' onChange={arrayChange}></input>
         <label for="forest">Forest</label>
-        <input type='checkbox' id='option7' name='mountain' value="Mountain" onChange={arrayChange}></input>
+        <input type='checkbox' id='option6' name='forest' value='Forest' onChange={arrayChange}></input>
         <label for="mountain">Mountain</label>
-        <input type='checkbox' id='option8' name='other' value='Other' onChange={arrayChange}></input>
+        <input type='checkbox' id='option7' name='mountain' value="Mountain" onChange={arrayChange}></input>
           <label for="other">Other</label>
+        <input type='checkbox' id='option8' name='other' value='Other' onChange={arrayChange}></input>
           
 </div>
     
       
 
         {/* Description */}
-        <label for="input-description">Description:</label>
+        <label className="label" for="input-description">Description:</label>
         <textarea
           id="input-description"
           className="textarea-description"
@@ -179,7 +179,7 @@ if (isUpdated) {
         />
 
         {/* Pricing */}
-        <label for="input-price"></label>
+        <label className="label"for="input-price">Price:</label>
         <input
           id="input-price"
           type='number'
@@ -192,7 +192,7 @@ if (isUpdated) {
         />
 
         {/* Details */}
-        <label for="input-details"></label>
+        <label className="label"for="input-details">Details:</label>
         <input
           type='text'
           id="input-details-1"
@@ -200,7 +200,6 @@ if (isUpdated) {
           placeholder={adventure.details[0]}
           value={d.detail1}
           name='detail1'
-          required
           onChange={detailsChange}
         />
 
@@ -211,7 +210,7 @@ if (isUpdated) {
           placeholder={adventure.details[1]}
           value={d.detail2}
           name='detail2'
-          required
+
           onChange={detailsChange}
         />
         <input
@@ -220,12 +219,12 @@ if (isUpdated) {
           placeholder={adventure.details[2]}
           value={d.detail3}
           name='detail3'
-          required
+          
           onChange={detailsChange}
         />
 
         {/* Images */}
-        <label for="input-images"></label>
+        <label className="label"for="input-images">Images:</label>
         <input
           type='text'
           id="input-images-1"
@@ -233,7 +232,7 @@ if (isUpdated) {
           placeholder={adventure.imgURL[0]}
           value={images.imgage1}
           name='image1'
-          required
+          
           onChange={imagesChange}
         />
 
@@ -245,7 +244,7 @@ if (isUpdated) {
           placeholder={adventure.imgURL[1]}
           value={images.imgage2}
           name='image2'
-          required
+          
           onChange={imagesChange}
         />
 <input
@@ -255,7 +254,7 @@ if (isUpdated) {
           placeholder={adventure.imgURL[2]}
           value={images.imgage3}
           name='image3'
-          required
+          
           onChange={imagesChange}
         />
 

@@ -1,0 +1,35 @@
+.sort-container {
+  display: flex;
+  /* width: 83.5vw; */
+  justify-content: flex-end;
+  margin: 20px;
+   display: flex;
+   text-align:right;
+   margin-top: 3px;
+  position:absolute;
+  right:100px;
+  top:110px;
+
+}
+
+label {
+  font-size: 18px;
+  font-weight: 600;
+  padding-right: 10px;
+}
+
+select {
+  background-color: var(--tone1);
+
+  cursor:pointer;
+  border: none;
+  font-size: 18px;
+}
+
+@media (max-width: 500px) {
+  .sort-container {
+      width: 100%;
+      justify-content: center;
+      margin: 0px;
+  }
+}
