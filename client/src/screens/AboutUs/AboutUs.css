@@ -4,6 +4,10 @@ footer{
   min-width: 100%;
 }
 
+.row {
+  display: flex;
+
+}
 
 .column {
   float: left;
@@ -76,8 +80,23 @@ footer{
   padding-top: 30px;
 }
 
+
 .about-us-container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
+
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+    /* flex-direction: column-reverse; */
+  }
+  .row{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
