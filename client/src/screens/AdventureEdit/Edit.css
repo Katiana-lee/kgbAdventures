@@ -43,7 +43,9 @@ padding: 15px;
 }
 
 #input-location.input-location, .textarea-description, .input-price, .input-details, .input-images{
-    width: 100%;
+    
+  font-family: 'Fira Sans Condensed', sans-serif;
+  width: 100%;
     background-color: #F6F6F6;
     color: #27445C;
     padding: 0.6em 1em;

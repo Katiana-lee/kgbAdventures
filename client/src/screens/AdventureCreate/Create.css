@@ -6,6 +6,7 @@ footer{
 }
  
  .create-form {
+  font-family: 'Fira Sans Condensed', sans-serif;
    display: flex;
    flex-direction: column;
 background-color: #F6F6F6;
