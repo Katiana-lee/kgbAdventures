@@ -1,10 +1,16 @@
+.nav {
+ margin-top: 0px;
+  position: sticky;
+  top: 90;
+}
+
+
 .adventure-detail {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   margin: 40px;
-  margin-bottom: 100px;
 }
 
 .detail-title {
