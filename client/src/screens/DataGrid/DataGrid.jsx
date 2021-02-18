@@ -3,6 +3,7 @@ import DataGrid from 'react-data-grid'
 import Layout from '../../components/shared/Layout/Layout'
 import { getAdventures } from "../../services/adventures";
 import { useState, useEffect } from 'react'
+import './DataGrid.css';
 
 
 
@@ -28,7 +29,6 @@ function Grid(props) {
     { key: 'price', name: 'Price' },
     { key: 'description', name: 'Description' },
     { key: 'details', name: 'Details' },
-    { key: 'imgurl', name: 'imgURL' },
   ];
 
   dataAdventures.map((dataAdventure) => {
@@ -40,13 +40,18 @@ function Grid(props) {
   
   return (
     <Layout>
-      <div>
+      <div className='fake-nav'>
+
+      </div>
+      <div className='title'>
         <h1>Inventory</h1>
       </div>
+      <div className='grid'>
     <DataGrid 
       columns={columns}
       rows={rows}
-    />
+        />
+        </div>
     </Layout>
   )
 }
