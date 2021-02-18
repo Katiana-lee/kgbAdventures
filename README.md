@@ -42,7 +42,7 @@ const User = new Schema(
 
 ## Team Expectations:
 [Google Doc](https://docs.google.com/document/d/1LLPvfZ1UdFtXFbPLtWd30ALIpCsPzNmO8_Wz-IJZUpY/edit?usp=sharing)
-
+ 
 ### MVP/PostMVP
 
 #### MVP 
