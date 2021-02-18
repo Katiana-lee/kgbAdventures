@@ -9,6 +9,10 @@ footer{
   height: 200px;
 }
 
+.row {
+  display: flex;
+
+}
 
 .column {
   float: left;
@@ -79,5 +83,9 @@ footer{
     width: 100%;
     display: block;
     /* flex-direction: column-reverse; */
+  }
+  .row{
+    display: flex;
+    flex-direction: column;
   }
 }
