@@ -1,6 +1,7 @@
 import "./ShoppingCart.css";
 import Layout from '../../components/shared/Layout/Layout';
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 function ShoppingCart(props) {
   const { user, onChange, cart, setCart } = props;
@@ -8,6 +9,7 @@ function ShoppingCart(props) {
   let total = 0;
 
   const shoppingTotal = cart.map((adventure, index) => {
+    console.log(total);
     total += parseInt(adventure.price);
   })
 
@@ -29,11 +31,13 @@ function ShoppingCart(props) {
       <div className="fake-nav"></div>
       <div className="shopping-title" style={{paddingTop: "5vh"}} >Shopping Cart</div>
       <div className="shop-container">
-        <div></div>
         {shoppingList}
         <div className="total-price">
-          <i class="fa fa-rub" aria-hidden="true"></i>
-          {shoppingTotal}
+          Total Price:
+          <div>
+            <i class="fa fa-rub total-logo" aria-hidden="true"></i>
+            {total}
+          </div>
         </div>
       </div>
       <div className="fake-footer"></div>
