@@ -6,6 +6,7 @@ import AdventureEdit from './screens/AdventureEdit/Edit'
 import Adventures from './screens/Adventures/Adventures'
 import AdventureCreate from './screens/AdventureCreate/Create'
 import AboutUs from './screens/AboutUs/AboutUs'
+import ShoppingCart from './screens/ShoppingCart/ShoppingCart'
 import SignIn from './screens/SignIn/SignIn'
 import SignOut from './screens/SignOut/SignOut'
 import SignUp from './screens/SignUp/SignUp'
@@ -15,6 +16,7 @@ import { verifyUser } from './services/users'
 function App() {
   const [user, setUser] = useState(null);
   const [filter, setFilter] = useState('all');
+  const [cart, setCart] = useState([]);
   const history = useHistory();
   
   useEffect(() => {
@@ -36,7 +38,8 @@ function App() {
 
   return (
     <div className="app">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"></link>
     <Switch>
       <Route exact path="/">
         <Landing onChange={onChange} user={user} filter={filter} setFilter={setFilter}/>
@@ -60,10 +63,13 @@ function App() {
         {user ? <AdventureEdit onChange={onChange} user={user} /> : <Redirect to='/' />}
       </Route>
       <Route exact path="/adventures/:id">
-        <AdventureDetail onChange={onChange} user={user} />
+          <AdventureDetail cart={cart} setCart={setCart} onChange={onChange} user={user} />
       </Route>
       <Route path="/about-us">
         <AboutUs onChange={onChange}/> 
+      </Route>
+      <Route path="/shopping-cart">
+        <ShoppingCart cart={cart} setCart={setCart} onChange={onChange}/>
       </Route>
     </Switch>
   </div>

@@ -2,14 +2,17 @@ import React, { useState, useEffect } from 'react'
 import './Detail.css'
 import Layout from '../../components/shared/Layout/Layout'
 import { getAdventure, deleteAdventure } from '../../services/adventures'
-import { useParams, Link } from 'react-router-dom'
+import { useParams, useHistory, Link } from 'react-router-dom'
 
 const AdventureDetail = (props) => {
-
+  const { cart, setCart } = props;
   const [adventure, setAdventure] = useState(null)
   const [isLoaded, setLoaded] = useState(false)
   const { id } = useParams()
+  const history = useHistory();
   const [mainImage, setMainImage] = useState("");
+  let temp = [];
+
 
   useEffect(() => {
       const fetchAdventure = async () => {
@@ -18,7 +21,8 @@ const AdventureDetail = (props) => {
         setLoaded(true)
         setMainImage(adventure.imgURL[0])
       }
-      fetchAdventure()
+    fetchAdventure()
+    temp = cart;
   }, [id])
 
   if (!isLoaded) {
@@ -45,12 +49,19 @@ const AdventureDetail = (props) => {
     setMainImage(image.image.toString());
   }
 
+  const buildCart = (e) => {
+    e.preventDefault();
+    setCart([...cart, adventure]);
+    console.log(cart)
+    history.push('/adventures');
+  }
+
   const imageList = adventure.imgURL.map((image, index) => (
     <img className="image-single" onClick={ (e) => switcheroo(e, {image}) } src={image}/>
   ));
 
   return (
-    <Layout user={props.user}>
+    <Layout onChange={props.onChange} user={props.user}>
       <div className="adventure-detail">
         <div className="detail-content">
           <div className="detail-title">{adventure.title}</div>
@@ -58,7 +69,7 @@ const AdventureDetail = (props) => {
           <br></br>
           <div className="detail-price-block">
             <div className="detail-price"><i class="fa fa-rub" aria-hidden="true"></i> {adventure.price}</div>
-            <div className="add-to-cart">ADD TO CART</div>
+            <button className="add-to-cart" onClick={(e) => buildCart(e)}>ADD TO CART</button>
           </div>
           <div className="detail-description">
             <span className="span-title">Description:</span>
