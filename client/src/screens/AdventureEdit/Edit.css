@@ -6,9 +6,11 @@ footer{
 }
  
  .create-form {
+   display: flex;
+   flex-direction: column;
 
 font-family: 'Liberator', sans-serif;
-align-self: center;
+/* align-self: center; */
 background-color: #F6F6F6;
 color: #27445C;
 padding: 3em;
@@ -22,20 +24,42 @@ transition: all 2s ease;
 
 .cat-buttons {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction:row;
+  justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
   outline: none;
   border: none;
   border-radius: 20px;
-  padding: 10px 20px;
-  display: flex;
-  flex-direction: column;
-  float: left;
-  align-items: center;
-
+  padding: 20px 0px;
+ width: 245px;
 }
 
+
+ #option1 {
+  margin-right: 50px;
+
+} 
+#option6 {
+  margin-right: 80px;
+
+} 
+#option7 {
+  margin-right: 90px;
+
+} 
+/* #option4 {
+  margin-left: 10px;
+
+}
+#option5 {
+  margin-left: 50px;
+
+}
+#option6 {
+  margin-left: 55px;
+
+}  */
 .create-title {
   text-align: center;
   /* padding: 2vh; */
