@@ -78,8 +78,8 @@ const AdventureCreate = (props) => {
     event.preventDefault()
     let imagesToAdd = [images.image1,images.image2,images.image3]
     let detailsToAdd = [d.detail1, d.detail2, d.detail3]
-    adventure.imgURL.push(imagesToAdd)
-    adventure.details.push(detailsToAdd)
+    adventure.imgURL.push(...imagesToAdd)
+    adventure.details.push(...detailsToAdd)
     setAdventure({
       ...adventure,
       
