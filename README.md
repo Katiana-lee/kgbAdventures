@@ -46,7 +46,6 @@ const User = new Schema(
 ### MVP/PostMVP
 
 #### MVP 
-[Github Projects](https://github.com/Katiana-lee/kgbAdventures/projects/1?add_cards_query=is%3Aopen)
 -Deployed full-crud backend && frontend
 -Landing page w/ Carousel and About section
 -Authentication && authorization
