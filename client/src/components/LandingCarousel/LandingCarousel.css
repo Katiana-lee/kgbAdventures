@@ -8,6 +8,7 @@
   height: 500px;
   width: 350px;
   margin: 50px;
+  box-shadow: 0 0 10px var(--tone2);
 }
 
 .image-text {
