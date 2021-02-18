@@ -4,23 +4,69 @@
   display: flex;
   justify-content: center;
   padding-bottom: 30px;
-  border: 2px solid red;
 }
 
 .adventure-shop-image {
-  width: 100px;
+  width: 200px;
 }
 
 .shop-container {
-  width: 60vw;
-  box-shadow: 2px 4px 10px var(--tone5);
-  border: 2px solid blue;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  margin-left: 10vw;
+  margin-right: 10vw;
 }
 
 .shop-layout {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.adventure-shop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 2px 4px 10px var(--tone5);
+  margin-bottom: 25px;
+  padding: 20px 60px 20px 60px;
+  height: 300px;
+}
+
+.shop-title {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.shop-price {
+  font-size: 30px;
+}
+
+.shop-price-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.total-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 2px 4px 10px var(--tone5);
+  margin-left: 15vw;
+  margin-right: 15vw;
+  margin-bottom: 25px;
+  padding: 20px 60px 20px 60px;
+  height: 75px;
+  font-size: 35px;
+  font-weight: 700;
+  margin-top: 50px;
+}
+
+.total-logo {
+  padding-right: 5px;
 }
