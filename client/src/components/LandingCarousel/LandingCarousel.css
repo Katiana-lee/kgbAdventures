@@ -1,6 +1,7 @@
 .image-container {
   position: relative;
   width: 100%;
+  outline: 0;
 }
 
 #carousel-imgs {
@@ -17,4 +18,35 @@
   color: white;
   text-shadow: 0 1px 0 black;
   font-weight: 900;
+}
+
+.lgksPe:hover:enabled,
+.lgksPe:focus:enabled {
+  color: var(--tone1) !important;
+  background-color: var(--tone2) !important;
+  box-shadow: 0 0 4px 0 var(--tone4) !important;
+}
+
+.lgksPe {
+  background-color: var(--tone1) !important;
+  color: var(--tone2) !important;
+  box-shadow: 0 0 4px 0px var(--tone4) !important;
+}
+
+.iLquPE {
+  background-color: var(--tone1) !important;
+  color: #999 !important;
+  box-shadow: 0 0 4px 0px var(--tone5) !important;
+}
+
+user agent stylesheet button {
+  color: -internal-light-dark(var(--tone4), var(--tone1));
+  background-color: -internal-light-dark(var(--tone1), var(--tone4));
+  border-color: -internal-light-dark(var(--tone1), var(--tone1));
+  border-image: initial;
+}
+
+.cJeRRR {
+  background-color: var(--tone2) !important;
+  box-shadow: 0 0 1px 3px var(--tone4) !important;
 }
