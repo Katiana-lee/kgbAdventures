@@ -9,7 +9,6 @@ const Nav = (props) => {
   const { onChange, filter, setFilter } = props;
 
   function handleOnClick(category) {
-    console.log(category);
     setFilter(category);
   }
 
@@ -18,7 +17,7 @@ const Nav = (props) => {
       <div className='nav'>
         <NavLink className="nav-child" to="/">
           <div className="logo-container">
-            {/* <img style={{ height: "80px", paddingRight: "20px" }} src={logoImage} /> */}
+           
             <img className="nav-title" style={{ height: "25px"}} src={logoName} />
           </div>
         </NavLink>

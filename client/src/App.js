@@ -31,7 +31,6 @@ function App() {
   const clearUser = () => setUser(null)
 
   const onChange = (e) => {
-    console.log(e.target.value);
     setFilter(e.target.value);
     history.push(`/adventures`);
   }

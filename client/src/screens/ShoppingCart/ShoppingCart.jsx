@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 function ShoppingCart(props) {
   const { user, onChange, cart, setCart } = props;
-  console.log(cart);
   let total = 0;
 
   const shoppingTotal = cart.map((adventure, index) => {

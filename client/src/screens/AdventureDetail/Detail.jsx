@@ -52,7 +52,6 @@ const AdventureDetail = (props) => {
   const buildCart = (e) => {
     e.preventDefault();
     setCart([...cart, adventure]);
-    console.log(cart)
     history.push('/adventures');
   }
 

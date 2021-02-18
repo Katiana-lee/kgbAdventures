@@ -9,7 +9,6 @@ function Landing(props) {
   const { user, onChange, filter, setFilter } = props;
 
   function handleOnClick(category) {
-    console.log(category);
     setFilter(category);
   }
 

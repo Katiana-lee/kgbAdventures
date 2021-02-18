@@ -4,7 +4,6 @@ import Nav from '../Nav/Nav'
 import Footer from '../Footer/Footer'
 
 const Layout = (props) => {
-  console.log(props)
   return (
     <div className='layout'>
       <Nav onChange={props.onChange} user={props.user}/>
