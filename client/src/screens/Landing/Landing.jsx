@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../../components/shared/Layout/Layout';
 import { Link } from 'react-router-dom';
 import LandingCarousel from '../../components/LandingCarousel/LandingCarousel'
+import headerPhoto from "../../images/headerPhoto.png";
 import './Landing.css';
 
 function Landing(props) {
@@ -15,16 +16,17 @@ function Landing(props) {
   return (
     <Layout onChange={ onChange } user={props.user}>
       <div>
-
+        <div className="fake-nav"></div>
         {user && <div className="welcome">Welcome, {user.username}</div>}
+        <img className="head-photo" style={{ width: "100vw", height: "90vh", objectFit: "cover"}} src={headerPhoto}/>
+        {/* <img style={{ width: "100vw", height: "90vh", objectFit: "cover"}}src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.wallpaperscraft.com%2Fimage%2Fcouple_fire_art_141100_3840x2400.jpg&f=1&nofb=1"/> */}
         
-       
-
-        <div>
+        <div className="carousel-container">
+          <div className="container-title carousel-title">Limited time featured adventures</div>
           <LandingCarousel />
         </div>
         <div className="category-container">
-          <h1>Featured Cards Section</h1>
+        <div className="container-title category-title">An adventure for every occasion</div>
           <div className="category-cards">
             <Link to="/adventures">
               <div onClick={() => handleOnClick("All")} className="category-card all-card">All</div>

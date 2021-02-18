@@ -1,5 +1,7 @@
 import React from 'react'
 import './Nav.css'
+import logoImage from "../../../images/tone4logo.png";
+import logoName from "../../../images/wordplainlogo.png";
 import { NavLink } from 'react-router-dom'
 
 
@@ -10,35 +12,34 @@ const Nav = (props) => {
     console.log(category);
     setFilter(category);
   }
-  
+
   return (
     <nav>
       <div className='nav'>
-        <NavLink className="logo" to='/'>KGB Adventures</NavLink>
-        <div className="links">
-          <select onChange={onChange} className="link" name="dropdown">
-            <option value="" disable selection hidden>Shop Adventures</option>
-            <option value="All">All</option>
-            <option value="Beach">Beach</option>
-            <option value="Country Side">Country Side</option>
-            <option value="Culture and Heritage">Culture and Heritage</option>
-            <option value="Desert">Desert</option>
-            <option value="Famous Journeys">Famous Journeys</option>
-            <option value="Forest">Forest</option>
-            <option value="Mountain">Mountain</option>
-            <option value="Other">Other</option>
-          </select>
+        <NavLink className="nav-child" to="/">
+          <div className="logo-container">
+            {/* <img style={{ height: "80px", paddingRight: "20px" }} src={logoImage} /> */}
+            <img className="nav-title" style={{ height: "25px"}} src={logoName} />
+          </div>
+        </NavLink>
+        <select onChange={onChange} className="nav-child nav-dropdown link" name="dropdown">
+          <option value="" disable selection hidden>Shop Adventures</option>
+          <option value="All">All</option>
+          <option value="Beach">Beach</option>
+          <option value="Country Side">Country Side</option>
+          <option value="Culture and Heritage">Culture and Heritage</option>
+          <option value="Desert">Desert</option>
+          <option value="Famous Journeys">Famous Journeys</option>
+          <option value="Forest">Forest</option>
+          <option value="Mountain">Mountain</option>
+          <option value="Other">Other</option>
+        </select>
+        <NavLink className="about-us link" to="/about-us">About Us</NavLink>
+        <NavLink to="/shopping-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></NavLink>
+        {/* <div className="nav-child links">
           <NavLink className="about-us link" to="/about-us">About Us</NavLink>
-          <NavLink to="/adventures">
-            <section className="search">
-              <label for="search-input">
-                <i className="fa fa-search"></i>
-                <span className="sr-only">Search Adventures</span>
-              </label>
-              <input id="search-input" placeholder="Search Adventures"/>
-            </section>
-          </NavLink>
-        </div>
+          <NavLink to="/shopping-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></NavLink>
+        </div> */}
       </div>
     </nav>
   )
