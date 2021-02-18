@@ -46,10 +46,10 @@ const User = new Schema(
 ### MVP/PostMVP
 
 #### MVP 
--Deployed full-crud backend && frontend
--Landing page w/ Carousel and About section
--Authentication && authorization
--Display different routes for general users vs. authenticated users
+- Deployed full-crud backend && frontend
+- Landing page w/ Carousel and About section
+- Authentication && authorization
+- Display different routes for general users vs. authenticated users
 
 #### PostMVP  
 - Have an "add to cart" button
