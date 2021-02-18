@@ -35,11 +35,8 @@ const Nav = (props) => {
           <option value="Other">Other</option>
         </select>
         <NavLink className="about-us link" to="/about-us">About Us</NavLink>
+        <NavLink className="inventory link" to="/inventory">Inventory</NavLink>
         <NavLink to="/shopping-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></NavLink>
-        {/* <div className="nav-child links">
-          <NavLink className="about-us link" to="/about-us">About Us</NavLink>
-          <NavLink to="/shopping-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></NavLink>
-        </div> */}
       </div>
     </nav>
   )

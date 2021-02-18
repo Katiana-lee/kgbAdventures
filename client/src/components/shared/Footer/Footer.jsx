@@ -7,16 +7,16 @@ function Footer(props) {
 
   const authenticatedOptions = (
     <>
-      <NavLink className="" to="/add-adventure">Add Adventure</NavLink>
+      <div><NavLink className="" to="/add-adventure">Add Adventure</NavLink></div>
       <br></br>  
-      <NavLink className="" to="/sign-out">Sign Out</NavLink>
+      <div><NavLink className="" to="/sign-out">Sign Out</NavLink></div>
     </>
   )
   const unauthenticatedOptions = (
       <>
-        <NavLink className="" to="/sign-up">Sign Up</NavLink>
+        <div><NavLink className="" to="/sign-up">Sign Up</NavLink></div>
         <br></br>
-        <NavLink className="" to="/sign-in">Sign In</NavLink>
+        <div><NavLink className="" to="/sign-in">Sign In</NavLink></div>
       </>
   )
 
@@ -40,11 +40,24 @@ function Footer(props) {
         </div>
         <div className="foot-link newsletter">
           <div className="foot-title">NEWSLETTER</div>
-          <div className="foot-title-links"></div>
+          <div className="foot-title-links">
+            <p>Sign up for special offers!</p>
+            <p>
+              <input placeholder="email@example.com"></input>
+              <NavLink to="/about-us"><div className="subscribe-button">SUBSCRIBE</div></NavLink>
+            </p>
+          </div>
         </div>
         <div className="foot-link get-connected">
           <div className="foot-title">GET CONNECTED</div>
-          <div className="foot-title-links"></div>
+          <div className="foot-title-links">
+            <p>
+              <a href="https://www.facebook.com"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+              <a href="https://www.twitter.com"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+              <a href="https://www.pinterest.com"><i class="fa fa-pinterest-p fa-2x" aria-hidden="true"></i></a>
+              <a href="https://www.instagram.com"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+            </p>
+          </div>
         </div>
       </footer>
     </div>
