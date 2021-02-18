@@ -103,7 +103,7 @@ const AdventureCreate = (props) => {
       <form className="create-form" onSubmit={handleSubmit}>
         
         {/* Title */}
-        <label for="input-title">Title:</label>
+        <label className="label" for="input-title">Title:</label>
         <input
           type='text'
           id="input-title"
@@ -117,7 +117,7 @@ const AdventureCreate = (props) => {
         />
 
         {/* Location */}
-        <label for="input-location">Location:</label>
+        <label className="label" for="input-location">Location:</label>
         <input
           id="input-location"
           className="input-location"
@@ -128,29 +128,32 @@ const AdventureCreate = (props) => {
           onChange={handleChange}
         />
 
-        {/* Category */}
-        <input type='checkbox' id='option1' name='beach' value="Beach" onChange={arrayChange}></input>
-        <label for="beach">Beach</label>
+          {/* Category */}
+          <div className="cat-buttons">
+        <label for="beach">Beach</label> {"\n"}
+        <input type='checkbox'  id='option1' name='beach' value="Beach" onChange={arrayChange}></input>
+        <label for="country side">Country Side</label> {"\n"}
         <input type='checkbox' id='option2' name='country side' value="Country Side" onChange={arrayChange}></input>
-        <label for="country side">Country Side</label>
-        <input type='checkbox' id='option3' name='culture and heritage' value="Culture and Heritage" onChange={arrayChange}></input>
         <label for="culture and heritage">Culture and Heritage</label>
+        <input type='checkbox' id='option3' name='culture and heritage' value="Culture and Heritage" onChange={arrayChange}></input>
+        <label for="desert">Desert</label> 
         <input type='checkbox' id='option4' name='desert' value="Desert" onChange={arrayChange}></input>
-        <label for="desert">Desert</label>
-        <input type='checkbox' id='option5' name='famous journeys' value='Famous Journeys' onChange={arrayChange}></input>
         <label for="famous journeys">Famous Journeys</label>
-        <input type='checkbox' id='option6' name='forest' value='Forest' onChange={arrayChange}></input>
+        <input type='checkbox' id='option5' name='famous journeys' value='Famous Journeys' onChange={arrayChange}></input>
         <label for="forest">Forest</label>
-        <input type='checkbox' id='option7' name='mountain' value="Mountain" onChange={arrayChange}></input>
+        <input type='checkbox' id='option6' name='forest' value='Forest' onChange={arrayChange}></input>
         <label for="mountain">Mountain</label>
+        <input type='checkbox' id='option7' name='mountain' value="Mountain" onChange={arrayChange}></input>
+          <label for="other">Other</label>
         <input type='checkbox' id='option8' name='other' value='Other' onChange={arrayChange}></input>
-        <label for="other">Other</label>
+          
+</div>
 
     
       
 
         {/* Description */}
-        <label for="input-description">Description:</label>
+        <label className="label"for="input-description">Description:</label>
         <textarea
           id="input-description"
           className="textarea-description"
@@ -163,7 +166,7 @@ const AdventureCreate = (props) => {
         />
 
         {/* Pricing */}
-        <label for="input-price">Price:</label>
+        <label className="label"for="input-price">Price:</label>
         <input
           id="input-price"
           type='number'
@@ -176,7 +179,7 @@ const AdventureCreate = (props) => {
         />
 
         {/* Details */}
-        <label for="input-details">details:</label>
+        <label className="label"for="input-details">Details:</label>
         <input
           type='text'
           id="input-details-1"
@@ -209,7 +212,7 @@ const AdventureCreate = (props) => {
         />
 
         {/* Images */}
-        <label for="input-images">details:</label>
+        <label className="label"for="input-images">Images:</label>
         <input
           type='text'
           id="input-images-1"

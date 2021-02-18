@@ -1,16 +1,4 @@
-/* .container {
-  background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.goodnet.org%2Farticles%2Ftop-10-travel-destinations-2015-their-green-ways&psig=AOvVaw36fv2-d2HY3o_80mMbPheq&ust=1613673400788000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNi1yIDI8e4CFQAAAAAdAAAAABAJ");
-} */
 
-/* button {
-  cursor: pointer;
-  font-size: 1rem;
-  padding: 0.6em 1em;
-  border-radius: 3px;
-  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
-}
- */
 .signupbutton{
   cursor: pointer;
   border: 2px solid var(--tone5);
@@ -103,7 +91,7 @@
 
 @media screen and (max-width: 650px) {
  .form-container form input  {
-  background-color: red;
+  background-color: var(--tone2)
 }
 
 }

@@ -5,12 +5,13 @@ footer{
   height: 200px;
 }
  
- .create-form {
+
+ /* .create-form {
    display: flex;
    flex-direction: column;
 
 font-family: 'Liberator', sans-serif;
-/* align-self: center; */
+
 background-color: #F6F6F6;
 color: #27445C;
 padding: 3em;
@@ -20,8 +21,8 @@ border: 2px solid #b0bec5;
 border-radius: 6px;
 box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
 transition: all 2s ease;
-}
 
+} */
 .cat-buttons {
   display: flex;
   flex-direction:row;
@@ -36,6 +37,56 @@ transition: all 2s ease;
 }
 
 
+.label {
+padding: 15px;
+/* text-align: center; */
+}
+
+#input-location.input-location, .textarea-description, .input-price, .input-details, .input-images{
+    width: 100%;
+    background-color: #F6F6F6;
+    color: #27445C;
+    padding: 0.6em 1em;
+    margin: 0.1em auto;
+    font-size: .5rem;
+    border-radius: 3px;
+    border: 2px solid #e0e0e0;
+    outline: none;
+    transition: all 0.4s ease;
+    
+  }
+  /* .input-location:valid .textarea-description:valid, .input-price:valid, .input-details:valid, .input-images:valid{
+    border: 2px solid  #27445C;
+  } */
+
+  #input-title.input-title {
+    padding: 15px;
+    margin: 20px;
+    font-weight: 600px;
+  }
+
+  .submit-button {
+    border: 2px solid var(--tone5);
+  background: var(--tone1);
+  color: var(--tone5);
+  transition: all 0.15s ease-in-out 0s;
+  display: inline-block;
+  font-weight: 700;
+  padding: 10px 35px;
+  letter-spacing: 0px;
+  font-size: 18px;
+  margin: 30px 0 30px 0;
+  }
+  
+  .submit-buton:hover {
+    border: 2px solid var(--tone4);
+    background: var(--tone4);
+    color: var(--tone2);
+    cursor: pointer;
+  }
+
+
+
  #option1 {
   margin-right: 50px;
 
@@ -48,22 +99,11 @@ transition: all 2s ease;
   margin-right: 90px;
 
 } 
-/* #option4 {
-  margin-left: 10px;
 
-}
-#option5 {
-  margin-left: 50px;
-
-}
-#option6 {
-  margin-left: 55px;
-
-}  */
-.create-title {
+/* .create-title {
   text-align: center;
-  /* padding: 2vh; */
-}
+  
+} */
 
 
 .edit-adventure-image {
@@ -81,6 +121,8 @@ h1{
   color: var(--tone4);
 }
 
+
+
 .edit-form {
   display: flex;
   justify-content: center;
@@ -89,21 +131,6 @@ h1{
 flex-direction: column;
 }
 
-.input-title {
- 
-  letter-spacing: 1px;
-  padding: 3px;
-   align-self: center;
-  padding: 1em;
-  width: 50%;
-  height: 80%;
-  margin: 4em auto;
-  border: 2px solid #b0bec5;
-  border-radius: 6px;
-  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
-  transition: all 2s ease;
-  
-}
 
 .textarea-description {
   
