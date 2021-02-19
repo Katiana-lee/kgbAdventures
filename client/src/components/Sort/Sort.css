@@ -1,15 +1,8 @@
 .sort-container {
   display: flex;
-  /* width: 83.5vw; */
-  justify-content: flex-end;
   margin: 20px;
-   display: flex;
-   text-align:right;
-   margin-top: 3px;
-  position:absolute;
-  right:100px;
-  top:110px;
-
+  margin-top: 3px;
+  justify-content: center;
 }
 
 label {

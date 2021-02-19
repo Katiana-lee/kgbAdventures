@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import './Nav.css'
 import logoImage from "../../../images/tone4logo.png";
 import logoName from "../../../images/wordplainlogo.png";
@@ -36,7 +36,7 @@ const Nav = (props) => {
         </select>
         <NavLink className="about-us link" to="/about-us">About Us</NavLink>
         <NavLink className="inventory link" to="/inventory">Inventory</NavLink>
-        <NavLink to="/shopping-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></NavLink>
+        <NavLink to="/shopping-cart"><i class="fa fa-shopping-cart link" aria-hidden="true"></i></NavLink>
       </div>
     </nav>
   )

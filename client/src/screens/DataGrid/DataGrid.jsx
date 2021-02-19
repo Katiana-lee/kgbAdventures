@@ -1,12 +1,9 @@
-import React from 'react'
+// import React from 'react'
 import DataGrid from 'react-data-grid'
 import Layout from '../../components/shared/Layout/Layout'
 import { getAdventures } from "../../services/adventures";
 import { useState, useEffect } from 'react'
 import './DataGrid.css';
-
-
-
 
 function Grid(props) {
   const [dataAdventures, setdataAdventures] = useState([]);

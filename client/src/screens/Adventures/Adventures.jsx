@@ -79,8 +79,10 @@ const Adventures = (props) => {
   return (
     <Layout onChange={onChange} user={props.user}>
       <div className="fake-nav"></div>
-      <Search onSubmit={handleSubmit} onChange={handleSearch} />
-      <Sort onSubmit={handleSubmit} onChange={handleSort} />
+      <div className="search-pack">
+        <Search onSubmit={handleSubmit} onChange={handleSearch} />
+        <Sort onSubmit={handleSubmit} onChange={handleSort} />
+      </div>
       <div className="adventure-cards">{adventuresJSX}</div>
     </Layout>
   );
