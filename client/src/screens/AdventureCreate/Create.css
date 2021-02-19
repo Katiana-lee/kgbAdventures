@@ -22,15 +22,19 @@ transition: all 2s ease;
 
 .cat-buttons {
   display: flex;
-  flex-direction:row;
-  justify-content: flex-start;
-  align-items: center;
-  flex-wrap: wrap;
+  justify-content: left;
   outline: none;
   border: none;
   border-radius: 20px;
   padding: 20px 0px;
- width: 245px;
+  width: 245px;
+  margin-left: 12vw;
+}
+
+.cat-pairs {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
 }
 
 
@@ -90,7 +94,7 @@ flex-direction: column;
 .input-title {
   background-color: #F6F6F6;
   color: #27445C;
-  font-size: .5rem;
+  font-size: 16px;
   border-radius: 3px;
   border: 2px solid #e0e0e0;
   outline: none;

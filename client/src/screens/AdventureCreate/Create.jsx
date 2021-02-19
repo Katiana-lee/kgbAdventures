@@ -130,22 +130,39 @@ const AdventureCreate = (props) => {
 
           {/* Category */}
           <div className="cat-buttons">
-        <label for="beach">Beach</label> {"\n"}
-        <input type='checkbox'  id='option1' name='beach' value="Beach" onChange={arrayChange}></input>
-        <label for="country side">Country Side</label> {"\n"}
-        <input type='checkbox' id='option2' name='country side' value="Country Side" onChange={arrayChange}></input>
-        <label for="culture and heritage">Culture and Heritage</label>
-        <input type='checkbox' id='option3' name='culture and heritage' value="Culture and Heritage" onChange={arrayChange}></input>
-        <label for="desert">Desert</label> 
-        <input type='checkbox' id='option4' name='desert' value="Desert" onChange={arrayChange}></input>
-        <label for="famous journeys">Famous Journeys</label>
-        <input type='checkbox' id='option5' name='famous journeys' value='Famous Journeys' onChange={arrayChange}></input>
-        <label for="forest">Forest</label>
-        <input type='checkbox' id='option6' name='forest' value='Forest' onChange={arrayChange}></input>
-        <label for="mountain">Mountain</label>
-        <input type='checkbox' id='option7' name='mountain' value="Mountain" onChange={arrayChange}></input>
-          <label for="other">Other</label>
-        <input type='checkbox' id='option8' name='other' value='Other' onChange={arrayChange}></input>
+            <div className="cat-pairs">
+              <label for="beach">Beach</label> {"\n"}
+              <input type='checkbox'  id='option1' name='beach' value="Beach" onChange={arrayChange}></input>
+            </div>
+            <div className="cat-pairs">
+              <label for="country side">Country Side</label> {"\n"}
+              <input type='checkbox' id='option2' name='country side' value="Country Side" onChange={arrayChange}></input>
+            </div>
+            <div className="cat-pairs">
+              <label for="culture and heritage">Culture and Heritage</label>
+              <input type='checkbox' id='option3' name='culture and heritage' value="Culture and Heritage" onChange={arrayChange}></input>
+            </div>
+            <div className="cat-pairs">
+              <label for="desert">Desert</label> 
+              <input type='checkbox' id='option4' name='desert' value="Desert" onChange={arrayChange}></input>
+            </div>
+            <div style={{ width: "30px"}}></div>
+            <div className="cat-pairs">
+              <label for="famous journeys">Famous Journeys</label>
+              <input type='checkbox' id='option5' name='famous journeys' value='Famous Journeys' onChange={arrayChange}></input>
+            </div>
+            <div className="cat-pairs">
+              <label for="forest">Forest</label>
+              <input type='checkbox' id='option6' name='forest' value='Forest' onChange={arrayChange}></input>
+            </div>
+            <div className="cat-pairs">
+              <label for="mountain">Mountain</label>
+              <input type='checkbox' id='option7' name='mountain' value="Mountain" onChange={arrayChange}></input>
+            </div>
+            <div className="cat-pairs">
+              <label for="other">Other</label>
+              <input type='checkbox' id='option8' name='other' value='Other' onChange={arrayChange}></input>
+            </div>
           
 </div>
 
@@ -250,7 +267,8 @@ const AdventureCreate = (props) => {
         
         <button type='submit' className="submit-button">Submit</button>
         </form>
-        </div>
+      </div>
+      <div className="fake-footer"></div>
     </Layout>
   )
 }
